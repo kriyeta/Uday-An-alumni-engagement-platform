@@ -8105,7 +8105,7 @@ body {
 }
 
 .header-jumbotron {
-    background: url('/images/svm-image.jpg') no-repeat center center fixed;
+    background: url(asset-path('svm-image.jpg')) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8243,4 +8243,11 @@ body {
 .header-menu {
     font-size: 15px;
     font-weight: bold;
+}
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 100px solid transparent;
+	border-bottom: 100px solid transparent;
+	border-left: 30px solid white;
 }
