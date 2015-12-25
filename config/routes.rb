@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home_page#home'
+  get '/upcoming_events', to: 'home_page#upcoming_events'
+  get '/all_events', to: 'home_page#all_events'
+  get '/agendas', to: 'home_page#agendas'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
