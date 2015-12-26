@@ -5,11 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
 </head>
 <body>
-<%= render 'layouts/pages_without_signin/header' %>
-<%= yield %>
-<%= render 'layouts/pages_without_signin/footer' %>
+  <%= render 'layouts/pages_without_signin/header' %>
+    <div class="main-content">
+      <%=yield %>
+    </div>
+    <%= render 'layouts/pages_without_signin/footer' %>
 </body>
 </html>
