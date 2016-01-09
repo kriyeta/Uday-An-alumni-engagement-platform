@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'meets_or_events/upcoming_events'
+
+  get 'meets_or_events/all_events'
+
+  get 'meets_or_events/agendas'
+
   # get 'home_page/home'
 
   # The priority is based upon order of creation: first created -> highest priority.

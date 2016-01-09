@@ -1,0 +1,2 @@
+module MeetsOrEventsHelper
+end
