@@ -53,4 +53,16 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+# Devise authentication
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'twitter'
+gem 'instagram'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', require: 'google/api_client'
 
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem "figaro"

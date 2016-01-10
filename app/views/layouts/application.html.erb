@@ -9,6 +9,8 @@
 <body>
   <%= render 'layouts/pages_without_signin/header' %>
     <div class="main-content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%=yield %>
     </div>
     <%= render 'layouts/pages_without_signin/footer' %>
