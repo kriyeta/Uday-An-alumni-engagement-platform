@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UdayDummy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'layouts/pages_without_signin/header' %>
+  <head>
+    <title>UdayDummy</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if user_signed_in? %>
+    <%= render 'layouts/pages_for_loggedin_user/header' %>
+    <% else %>
+    <%= render 'layouts/pages_without_signin/header' %>
+    <% end %>
     <div class="main-content">
       <%=yield %>
     </div>
     <%= render 'layouts/pages_without_signin/footer' %>
-</body>
+  </body>
 </html>

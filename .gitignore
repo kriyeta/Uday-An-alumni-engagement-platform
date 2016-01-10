@@ -18,3 +18,31 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Netbeans #
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Eclipse #
+log/
+target/
+.classpath
+.gitignore.swp
+.project
+.settings/
+
+# mac #
+.DS_Store
