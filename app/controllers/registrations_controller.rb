@@ -14,4 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
       resource.update_with_password(params)
     end
   end
+  def after_sign_up_path_for(resource)
+    '/alumni_form'
+  end
 end

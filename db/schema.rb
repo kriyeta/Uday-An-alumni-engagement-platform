@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110160353) do
+ActiveRecord::Schema.define(version: 20160122164318) do
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,8 +25,19 @@ ActiveRecord::Schema.define(version: 20160110160353) do
     t.string   "image"
     t.string   "phone"
     t.string   "urls"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "gender"
+    t.date     "date_of_birth"
+    t.string   "passout_year"
+    t.string   "passout_class"
+    t.string   "current_city"
+    t.string   "current_country"
+    t.string   "current_address"
+    t.string   "permanent_address"
+    t.string   "current_occupation_status"
+    t.string   "current_occupation_status_details"
+    t.string   "preferred_time_of_contact"
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'alumni/update_alumni_information'
+
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   devise_scope :user do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
@@ -22,6 +24,8 @@ Rails.application.routes.draw do
   get '/upcoming_events', to: 'home_page#upcoming_events'
   get '/all_events', to: 'home_page#all_events'
   get '/agendas', to: 'home_page#agendas'
+  get '/alumni_form', to: 'alumni#show_alumni_information_form'
+  post '/update_alumni_information', to: 'alumni#update_alumni_information'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
