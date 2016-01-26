@@ -9,23 +9,24 @@
           <p></p>
         </li>
         <li id="li_1">
-          <label class="description" for="element_1">Name: </label>
+          <label class="description" for="element_1">Name *: </label>
           <div>
             <input name="authenticity_token" type="hidden" value="x37DrAAhdIIb7s+w2+AdoTR8cSJIpQhIetKRrPgGYVA=">
-            <input id="element_1" name="element_1" class="element text large" type="text" maxlength="255" value="">
+            <input id="element_1" name="element_1" class="element text large" type="text" maxlength="255" required>
           </div>
         </li>
         <li id="li_2">
-          <label class="description" for="element_2">Email: </label>
+          <label class="description" for="element_2">Email *: </label>
           <div>
-            <input id="element_2" name="element_2" class="element text large" type="text" maxlength="255" value="">
+            <input id="element_2" name="element_2" class="element text large" type="text" maxlength="255" value="<%= current_user.email %>" disabled>
           </div>
         </li>
         <li id="li_6">
           <label class="description" for="element_6">Gender: </label>
           <div>
             <select class="element select medium" id="element_6" name="element_6">
-              <option value="1" selected="selected">Male</option>
+              <option value="" selected hidden>Please Select</option>
+              <option value="1">Male</option>
               <option value="2">Female</option>
               <option value="3">N/A</option>
 
@@ -33,7 +34,7 @@
           </div>
         </li>
         <li id="li_3">
-          <label class="description" for="element_3">Mobile: </label>
+          <label class="description" for="element_3">Mobile *: </label>
           <div>
             <input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value="">
           </div>
@@ -596,7 +597,7 @@
           <div>
             <select class="element select large" id="element_17" name="element_17">
               <option value="1">Student</option>
-              <option value="2" selected="selected">Emplyed</option>
+              <option value="2" selected="selected">Employed</option>
               <option value="3">Self Employed</option>
               <option value="4">Business</option>
               <option value="5">Other</option>

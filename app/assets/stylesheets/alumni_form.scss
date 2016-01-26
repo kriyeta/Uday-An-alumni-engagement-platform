@@ -1,6 +1,7 @@
 #form_container_wrapper {
 	width: 100%;
 	background: #FFE0B2;
+	margin:0 auto;
 }
 
 #form_container {
@@ -460,7 +461,10 @@
     .embed form.appnitro {
         margin: 0px 0px 0;
     }
-    /*** Calendar **********************/
+    
+}
+
+/*** Calendar **********************/
     div.calendar {
         position: relative;
     }
@@ -625,4 +629,3 @@
         background: #dedede;
         font-weight: bold;
     }
-}

@@ -1,4 +1,5 @@
 class MeetsOrEventsController < ApplicationController
+  before_action :authenticate_user!
   def upcoming_events
   end
 

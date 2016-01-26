@@ -124,4 +124,15 @@
             </ul>
         </div>
     </div>
+    <% is_not_profile_complete = current_user.identities.first.nil? or
+    current_user.email.nil? or 
+    current_user.identities.first.name.nil? or 
+    current_user.identities.first.passout_class.nil? or 
+    current_user.identities.first.passout_year.nil? %>
+    <% if is_not_profile_complete and !request.original_url.include? "alumni_form" %>
+    <div class="loggedin-header-update-profile-prompt bg-info">
+        <div style="float:left; margin-left:20px;"><h4>Plaese update your profile. It will help you to easily connect with your batchmates.</h4></div>
+        <div style="float:right; margin-top:7px; margin-right:20px;"><a class="btn btn-primary" href="/alumni_form" role="button">UPDATE YOUR PROFILE</a></div>
+    </div>
+    <% end %>
 </div>
