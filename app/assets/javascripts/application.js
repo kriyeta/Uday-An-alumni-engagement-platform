@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(window).scroll(function() {
-    if (window.location.href.toString().indexOf("alumni_form") > -1) {
+    if (window.location.href.toString().indexOf("alumni_personal_info") > -1) {
         $('.loggedin-header-update-profile-prompt').hide();
     }
     else if ($(this).scrollTop() > 0) {

@@ -24,7 +24,9 @@ Rails.application.routes.draw do
   get '/upcoming_events', to: 'home_page#upcoming_events'
   get '/all_events', to: 'home_page#all_events'
   get '/agendas', to: 'home_page#agendas'
-  get '/alumni_form', to: 'alumni#show_alumni_information_form'
+  get '/alumni_personal_info', to: 'alumni#alumni_personal_info_form'
+  get '/alumni_schooling_info', to: 'alumni#alumni_schooling_info_form'
+  get '/alumni_current_location_n_occupation_info', to: 'alumni#alumni_current_location_n_occupation_info_form'
   post '/update_alumni_information', to: 'alumni#update_alumni_information'
 
   # Example of regular route:

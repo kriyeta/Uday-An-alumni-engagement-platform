@@ -5,6 +5,6 @@ class AlumniController < ApplicationController
     p "@@@@@@@@@@@", params
   end
   
-  def show_alumni_information_form
+  def alumni_personal_info_form
   end
 end

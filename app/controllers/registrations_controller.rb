@@ -16,7 +16,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
   def after_sign_up_path_for(resource)
-    '/alumni_form'
+    '/alumni_personal_info'
   end
   private
 

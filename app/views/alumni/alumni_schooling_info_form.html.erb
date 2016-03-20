@@ -1,0 +1,66 @@
+<div id="form_container_wrapper">
+  <div id="form_container">
+
+    <form class="appnitro" method="post" action="/update_alumni_information">
+      <ul>
+        <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION</h3></li>
+        <li class="section_break">
+          <h3>SCHOOLING INFORMATION:</h3>
+          <p></p>
+        </li>
+        <li id="li_14">
+          <label class="description" for="element_14">Passout School: </label>
+          <div>
+            <select class="element select large" id="element_14" name="passout_school">
+              <option value="1" selected="selected">Saraswati Vidya Mandir Inter College</option>
+              <option value="2">Saraswati Sishu Mandir</option>
+
+            </select>
+          </div>
+        </li>
+        <li id="li_15">
+          <label class="description" for="element_15">Passout Class: </label>
+          <div>
+            <select class="element select large" id="element_15" name="passout_class">
+              <option value="1" selected="selected">12</option>
+              <option value="2">11</option>
+              <option value="3">10</option>
+              <option value="4">9</option>
+              <option value="5">8</option>
+              <option value="6">7</option>
+              <option value="7">6</option>
+              <option value="8">5</option>
+              <option value="9">4</option>
+              <option value="10">3</option>
+              <option value="11">2</option>
+              <option value="12">1</option>
+
+            </select>
+          </div>
+        </li>
+        <li id="li_16">
+          <label class="description" for="element_16">Passout Year: </label>
+          <div>
+            <select class="element select large" id="element_16" name="passout_year">
+              <%= current_year  = Time.now.year %>
+              <%= i = current_year+2 %>
+              <%  while i > 1970 %>
+                  <option value='<%= i %>'><%= i %></option>
+              <%= i=i-1 %>
+              <%  end %>
+              <option value="1" selected="selected">2016</option>
+              <option value="2">2015</option>
+              <option value="3">2014</option>
+
+            </select>
+          </div>
+        </li>
+
+        <li>
+          <input class="next-button" style="width: 49%;" id="goBack" align="left" type="submit" name="personal-info-next" value="Previous">
+          <input class="next-button" style="width: 49%;" id="saveForm" align="right" type="submit" name="personal-info-next" value="Next">
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
