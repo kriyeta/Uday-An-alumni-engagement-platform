@@ -46,3 +46,6 @@ target/
 
 # mac #
 .DS_Store
+
+# RubyMine #
+.idea/
