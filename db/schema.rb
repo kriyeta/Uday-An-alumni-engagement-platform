@@ -25,12 +25,32 @@ ActiveRecord::Schema.define(version: 20160122164318) do
     t.string   "image"
     t.string   "phone"
     t.string   "urls"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                             default: "", null: false
+    t.string   "encrypted_password",                default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                     default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.string   "gender"
     t.date     "date_of_birth"
+    t.string   "name"
+    t.string   "passout_school"
     t.string   "passout_year"
     t.string   "passout_class"
+    t.string   "mobile"
     t.string   "current_city"
     t.string   "current_country"
     t.string   "current_address"
@@ -38,23 +58,6 @@ ActiveRecord::Schema.define(version: 20160122164318) do
     t.string   "current_occupation_status"
     t.string   "current_occupation_status_details"
     t.string   "preferred_time_of_contact"
-  end
-
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

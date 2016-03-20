@@ -12,19 +12,19 @@
           <label class="description" for="element_1">Name *: </label>
           <div>
             <input name="authenticity_token" type="hidden" value="x37DrAAhdIIb7s+w2+AdoTR8cSJIpQhIetKRrPgGYVA=">
-            <input id="element_1" name="element_1" class="element text large" type="text" maxlength="255" required>
+            <input id="element_1" name="name" class="element text large" type="text" maxlength="255" value="<%= current_user.name %>" required>
           </div>
         </li>
         <li id="li_2">
           <label class="description" for="element_2">Email *: </label>
           <div>
-            <input id="element_2" name="element_2" class="element text large" type="text" maxlength="255" value="<%= current_user.email %>" disabled>
+            <input id="element_2" name="email" class="element text large" type="text" maxlength="255" value="<%= current_user.email %>" disabled>
           </div>
         </li>
         <li id="li_6">
           <label class="description" for="element_6">Gender: </label>
           <div>
-            <select class="element select medium" id="element_6" name="element_6">
+            <select class="element select medium" id="element_6" name="gender" required>
               <option value="" selected hidden>Please Select</option>
               <option value="1">Male</option>
               <option value="2">Female</option>
@@ -36,21 +36,21 @@
         <li id="li_3">
           <label class="description" for="element_3">Mobile *: </label>
           <div>
-            <input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value="">
+            <input id="element_3" name="mobile" class="element text medium" type="text" maxlength="255" value="<%= current_user.mobile %>">
           </div>
         </li>
         <li id="li_4">
           <label class="description" for="element_4">Date of Birth: </label>
           <span>
-			<input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<input id="element_4_1" name="dob_dd" class="element text" size="2" maxlength="2" value="" type="text"> /
 			<label for="element_4_1">DD</label>
 		</span>
           <span>
-			<input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<input id="element_4_2" name="dob_mm" class="element text" size="2" maxlength="2" value="" type="text"> /
 			<label for="element_4_2">MM</label>
 		</span>
           <span>
-	 		<input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text">
+	 		<input id="element_4_3" name="dob_yyyy" class="element text" size="4" maxlength="4" value="" type="text">
 			<label for="element_4_3">YYYY</label>
 		</span>
 
@@ -73,32 +73,32 @@
           <label class="description" for="element_5">Permanent Address: </label>
 
           <div>
-            <input id="element_5_1" name="element_5_1" class="element text large" value="" type="text">
+            <input id="element_5_1" name="permanent_address_street_address" class="element text large" value="" type="text">
             <label for="element_5_1">Street Address</label>
           </div>
 
           <div>
-            <input id="element_5_2" name="element_5_2" class="element text large" value="" type="text">
+            <input id="element_5_2" name="permanent_address_addressline_2" class="element text large" value="" type="text">
             <label for="element_5_2">Address Line 2</label>
           </div>
 
           <div class="left">
-            <input id="element_5_3" name="element_5_3" class="element text medium" value="" type="text">
+            <input id="element_5_3" name="permanent_address_city" class="element text medium" value="" type="text">
             <label for="element_5_3">City</label>
           </div>
 
           <div class="right">
-            <input id="element_5_4" name="element_5_4" class="element text medium" value="" type="text">
+            <input id="element_5_4" name="permanent_address_state" class="element text medium" value="" type="text">
             <label for="element_5_4">State / Province / Region</label>
           </div>
 
           <div class="left">
-            <input id="element_5_5" name="element_5_5" class="element text medium" maxlength="15" value="" type="text">
+            <input id="element_5_5" name="permanent_address_zip" class="element text medium" maxlength="15" value="" type="text">
             <label for="element_5_5">Postal / Zip Code</label>
           </div>
 
           <div class="right">
-            <select class="element select medium" id="element_5_6" name="element_5_6">
+            <select class="element select medium" id="element_5_6" name="permanent_address_country">
               <option value="" selected="selected"></option>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
@@ -307,7 +307,7 @@
         <li id="li_14">
           <label class="description" for="element_14">Passout School: </label>
           <div>
-            <select class="element select large" id="element_14" name="element_14">
+            <select class="element select large" id="element_14" name="passout_school">
               <option value="1" selected="selected">Saraswati Vidya Mandir Inter College</option>
               <option value="2">Saraswati Sishu Mandir</option>
 
@@ -317,7 +317,7 @@
         <li id="li_15">
           <label class="description" for="element_15">Passout Class: </label>
           <div>
-            <select class="element select large" id="element_15" name="element_15">
+            <select class="element select large" id="element_15" name="passout_class">
               <option value="1" selected="selected">12</option>
               <option value="2">11</option>
               <option value="3">10</option>
@@ -337,7 +337,7 @@
         <li id="li_16">
           <label class="description" for="element_16">Passout Year: </label>
           <div>
-            <select class="element select large" id="element_16" name="element_16">
+            <select class="element select large" id="element_16" name="passout_year">
               <option value="1" selected="selected">2016</option>
               <option value="2">2015</option>
               <option value="3">2014</option>
@@ -352,45 +352,45 @@
         <li id="li_10">
           <label class="description" for="element_10">Mobile: </label>
           <div>
-            <input id="element_10" name="element_10" class="element text medium" type="text" maxlength="255" value="">
+            <input id="element_10" name="mobile" class="element text medium" type="text" maxlength="255" value="">
           </div>
         </li>
         <li id="li_11">
           <label class="description" for="element_11">Preferred time of Contact: </label>
           <div>
-            <input id="element_11" name="element_11" class="element text large" type="text" maxlength="255" value="">
+            <input id="element_11" name="preferred_time_of_contact" class="element text large" type="text" maxlength="255" value="">
           </div>
         </li>
         <li id="li_12">
           <label class="description" for="element_12">Current Address: </label>
 
           <div>
-            <input id="element_12_1" name="element_12_1" class="element text large" value="" type="text">
+            <input id="element_12_1" name="current_address_street_address" class="element text large" value="" type="text">
             <label for="element_12_1">Street Address</label>
           </div>
 
           <div>
-            <input id="element_12_2" name="element_12_2" class="element text large" value="" type="text">
+            <input id="element_12_2" name="current_address_addressline_2" class="element text large" value="" type="text">
             <label for="element_12_2">Address Line 2</label>
           </div>
 
           <div class="left">
-            <input id="element_12_3" name="element_12_3" class="element text medium" value="" type="text">
+            <input id="element_12_3" name="current_address_city" class="element text medium" value="" type="text" required>
             <label for="element_12_3">City</label>
           </div>
 
           <div class="right">
-            <input id="element_12_4" name="element_12_4" class="element text medium" value="" type="text">
+            <input id="element_12_4" name="current_address_state" class="element text medium" value="" type="text">
             <label for="element_12_4">State / Province / Region</label>
           </div>
 
           <div class="left">
-            <input id="element_12_5" name="element_12_5" class="element text medium" maxlength="15" value="" type="text">
+            <input id="element_12_5" name="current_address_zip" class="element text medium" maxlength="15" value="" type="text">
             <label for="element_12_5">Postal / Zip Code</label>
           </div>
 
           <div class="right">
-            <select class="element select medium" id="element_12_6" name="element_12_6">
+            <select class="element select medium" id="element_12_6" name="current_address_country" required>
               <option value="" selected="selected"></option>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
@@ -595,7 +595,7 @@
         <li id="li_17">
           <label class="description" for="element_17">What do you do? </label>
           <div>
-            <select class="element select large" id="element_17" name="element_17">
+            <select class="element select large" id="element_17" name="what_do_you_do">
               <option value="1">Student</option>
               <option value="2" selected="selected">Employed</option>
               <option value="3">Self Employed</option>
@@ -608,9 +608,9 @@
         <li id="li_13">
           <label class="description" for="element_13">Details: </label>
           <div>
-            <textarea id="element_13" name="element_13" class="element textarea small"></textarea>
+            <textarea id="element_13" name="what_do_you_do_details" class="element textarea small"></textarea>
           </div>
-          <p class="guidelines" id="guide_13"><small>Please enter helpful information for above selection</small></p>
+          <p class="guidelines" id="guide_13"><small>Please enter more helpful information for What do you do? selection</small></p>
         </li>
 
         <li class="buttons">
