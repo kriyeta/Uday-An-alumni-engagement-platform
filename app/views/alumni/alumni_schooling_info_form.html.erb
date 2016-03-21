@@ -3,56 +3,59 @@
 
     <form class="appnitro" method="post" action="/update_alumni_information">
       <ul>
-        <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION</h3></li>
+        <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (2/3)</h3></li>
         <li class="section_break">
           <h3>SCHOOLING INFORMATION:</h3>
           <p></p>
         </li>
         <li id="li_14">
-          <label class="description" for="element_14">Passout School: </label>
+          <label class="description" for="passout_school">Passout School: </label>
           <div>
-            <select class="element select large" id="element_14" name="passout_school">
-              <option value="1" selected="selected">Saraswati Vidya Mandir Inter College</option>
-              <option value="2">Saraswati Sishu Mandir</option>
-
+            <select class="element select large" id="passout_school" name="passout_school">
+              <option value="Saraswati Vidya Mandir Inter College" selected="selected">Saraswati Vidya Mandir Inter College</option>
+              <option value="Saraswati Sishu Mandir">Saraswati Sishu Mandir</option>
             </select>
+            <script type="text/javascript">
+              document.getElementById('passout_school').value = "<%= current_user.passout_school ||"Saraswati Vidya Mandir Inter College" %>";
+            </script>
           </div>
         </li>
         <li id="li_15">
-          <label class="description" for="element_15">Passout Class: </label>
+          <label class="description" for="passout_class">Passout Class: </label>
           <div>
-            <select class="element select large" id="element_15" name="passout_class">
-              <option value="1" selected="selected">12</option>
-              <option value="2">11</option>
-              <option value="3">10</option>
-              <option value="4">9</option>
-              <option value="5">8</option>
-              <option value="6">7</option>
-              <option value="7">6</option>
-              <option value="8">5</option>
-              <option value="9">4</option>
-              <option value="10">3</option>
-              <option value="11">2</option>
-              <option value="12">1</option>
-
+            <select class="element select large" id="passout_class" name="passout_class">
+              <option value="12" selected="selected">12</option>
+              <option value="11">11</option>
+              <option value="10">10</option>
+              <option value="9">9</option>
+              <option value="8">8</option>
+              <option value="7">7</option>
+              <option value="6">6</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
             </select>
+            <script type="text/javascript">
+              document.getElementById('passout_class').value = "<%= current_user.passout_class ||"12" %>";
+            </script>
           </div>
         </li>
         <li id="li_16">
-          <label class="description" for="element_16">Passout Year: </label>
+          <label class="description" for="passout_year">Passout Year: </label>
           <div>
-            <select class="element select large" id="element_16" name="passout_year">
+            <select class="element select large" id="passout_year" name="passout_year">
               <%= current_year  = Time.now.year %>
               <%= i = current_year+2 %>
-              <%  while i > 1970 %>
+              <%  while i > 1969 %>
                   <option value='<%= i %>'><%= i %></option>
               <%= i=i-1 %>
               <%  end %>
-              <option value="1" selected="selected">2016</option>
-              <option value="2">2015</option>
-              <option value="3">2014</option>
-
             </select>
+            <script type="text/javascript">
+              document.getElementById('passout_year').value = "<%= current_user.passout_year || current_year %>";
+            </script>
           </div>
         </li>
 
