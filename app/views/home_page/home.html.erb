@@ -1,16 +1,24 @@
 <%= render 'home_page/pages_without_signin/main_jumbotron' %>
 <div class="section whiteblock">
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-sm-12 col-xs-12">
-        <%= render 'home_page/pages_without_signin/upcoming_events' %>
-      </div>
-      <div class="col-md-4 hidden-sm hidden-sm">
-        <div id="home-login" class="section upcoming-events-box-header">
-          <%= render 'home_page/pages_without_signin/signin_signup_widget' %>
+    <% if user_signed_in? %>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <%= render 'home_page/pages_without_signin/upcoming_events' %>
+          </div>
         </div>
-      </div>
-    </div>
+    <% else %>
+        <div class="row">
+          <div class="col-md-8 col-sm-12 col-xs-12">
+            <%= render 'home_page/pages_without_signin/upcoming_events' %>
+          </div>
+          <div class="col-md-4 hidden-sm hidden-sm">
+            <div id="home-login" class="section upcoming-events-box-header">
+              <%= render 'home_page/pages_without_signin/signin_signup_widget' %>
+            </div>
+          </div>
+        </div>
+    <% end %>
   </div>
 </div>
 <%= render 'home_page/pages_without_signin/students_needs_discussion_section' %>
