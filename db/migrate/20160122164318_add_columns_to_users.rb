@@ -7,6 +7,7 @@ class AddColumnsToUsers < ActiveRecord::Migration
     add_column :users, :mobile, :string
     add_column :users, :current_city, :string
     add_column :users, :current_country, :string
+    add_column :users, :current_zipcode, :string
     add_column :users, :current_address, :string
     add_column :users, :permanent_address, :string
     add_column :users, :current_occupation_status, :string

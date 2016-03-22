@@ -9,48 +9,28 @@
           <h3>CURRENT LOCATION &amp; OCCUPATION:</h3>
           <p></p>
         </li>
-        <li id="li_10">
-          <label class="description" for="element_10">Mobile: </label>
-          <div>
-            <input id="element_10" name="mobile" class="element text medium" type="text" maxlength="255" value="">
-          </div>
-        </li>
-        <li id="li_11">
-          <label class="description" for="element_11">Preferred time of Contact: </label>
-          <div>
-            <input id="element_11" name="preferred_time_of_contact" class="element text large" type="text" maxlength="255" value="">
-          </div>
-        </li>
         <li id="li_12">
-          <label class="description" for="element_12">Current Address: </label>
 
-          <div>
-            <input id="element_12_1" name="current_address_street_address" class="element text large" value="" type="text">
-            <label for="element_12_1">Street Address</label>
-          </div>
 
-          <div>
-            <input id="element_12_2" name="current_address_addressline_2" class="element text large" value="" type="text">
-            <label for="element_12_2">Address Line 2</label>
-          </div>
+
+          <span style="width: 100%">
+          <label class="description" for="element_5">Current Address: </label>
+            <textarea id="element_5" name="current_address" style="width: 100%" rows="4" class="" placeholder="Please enter current address"><%= current_user.try(:current_address) %></textarea>
+          </span>
+
 
           <div class="left">
-            <input id="element_12_3" name="current_address_city" class="element text medium" value="" type="text" required>
+            <input id="element_12_3" name="current_address_city" class="element text medium" value="<%= current_user.try(:current_city) %>" type="text" required>
             <label for="element_12_3">City</label>
           </div>
 
           <div class="right">
-            <input id="element_12_4" name="current_address_state" class="element text medium" value="" type="text">
-            <label for="element_12_4">State / Province / Region</label>
-          </div>
-
-          <div class="left">
-            <input id="element_12_5" name="current_address_zip" class="element text medium" maxlength="15" value="" type="text">
+            <input id="element_12_5" name="current_address_zip" class="element text medium" maxlength="15" value="<%= current_user.try(:current_zipcode) %>" type="text">
             <label for="element_12_5">Postal / Zip Code</label>
           </div>
 
-          <div class="right">
-            <select class="element select medium" id="element_12_6" name="current_address_country" required>
+          <div>
+            <select class="element select large" id="country" name="current_address_country" required>
               <option value="" selected="selected"></option>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
@@ -250,6 +230,9 @@
 
             </select>
             <label for="element_12_6">Country</label>
+            <script type="text/javascript">
+              document.getElementById('country').value = "<%= current_user.try(:current_country) ||"India" %>";
+            </script>
           </div>
         </li>
         <li id="li_17">
@@ -266,7 +249,7 @@
           </div>
         </li>
         <li id="li_13">
-          <label class="description" for="element_13">Details: </label>
+          <label class="description" for="element_13">Occupation Details: </label>
           <div>
             <textarea id="element_13" name="what_do_you_do_details" class="element textarea small"></textarea>
           </div>

@@ -1,0 +1,796 @@
+/* line 1, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container_wrapper {
+  width: 100%;
+  background: #FFE0B2;
+  margin: 0 auto;
+}
+
+/* line 7, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container {
+  background: #FFCC80;
+  padding-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  /**** Logo Section  *****/
+  /**** Form Section ****/
+  /**** Buttons ****/
+  /**** Inputs and Labels ****/
+  /**** Errors ****/
+  /**** Guidelines and Error Highlight ****/
+  /*** Success Message ****/
+  /*** Password ****/
+  /** Embedded Form **/
+}
+/* line 13, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form.appnitro {
+  margin: 20px 20px 0;
+  padding: 0 0 20px;
+}
+/* line 18, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container h1 {
+  background-color: #FF9900;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-decoration: none;
+  text-indent: -8000px;
+}
+/* line 26, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container h1 a {
+  display: block;
+  height: 100%;
+  min-height: 40px;
+  overflow: hidden;
+}
+/* line 32, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form-heading {
+  color: #d9534f;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: bolder;
+}
+/* line 38, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .appnitro {
+  font-family: Lucida Grande, Tahoma, Arial, Verdana, sans-serif;
+  font-size: small;
+}
+/* line 42, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .appnitro li {
+  width: 61%;
+}
+/* line 45, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form ul {
+  font-size: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 52, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li {
+  display: block;
+  margin: 0;
+  padding: 4px 5px 2px 9px;
+  position: relative;
+}
+/* line 58, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 65, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .buttons:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 72, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .buttons {
+  clear: both;
+  display: block;
+  margin-top: 10px;
+}
+/* line 77, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .next-button {
+  margin-top: 10px;
+  height: 40px;
+  background-color: #e76b00;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: bolder;
+  font-size: x-large;
+}
+/* line 85, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container * html form li {
+  height: 1%;
+}
+/* line 88, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container * html .buttons {
+  height: 1%;
+}
+/* line 91, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container * html form li div {
+  display: inline-block;
+}
+/* line 94, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div {
+  color: #444;
+  margin: 0 4px 0 0;
+  padding: 0 0 8px;
+}
+/* line 99, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li span {
+  color: #444;
+  float: left;
+  margin: 0 4px 0 0;
+  padding: 0 0 8px;
+}
+/* line 105, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div.left {
+  display: inline;
+  float: left;
+  width: 48%;
+}
+/* line 110, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div.right {
+  display: inline;
+  float: right;
+  width: 48%;
+}
+/* line 115, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div.left .medium {
+  width: 100%;
+}
+/* line 118, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div.right .medium {
+  width: 100%;
+}
+/* line 121, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .clear {
+  clear: both;
+}
+/* line 124, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li div label {
+  clear: both;
+  color: #444;
+  display: block;
+  font-size: 9px;
+  line-height: 9px;
+  margin: 0;
+  padding-top: 3px;
+}
+/* line 133, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li span label {
+  clear: both;
+  color: #444;
+  display: block;
+  font-size: 9px;
+  line-height: 9px;
+  margin: 0;
+  padding-top: 3px;
+}
+/* line 142, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li .datepicker {
+  cursor: pointer !important;
+  float: left;
+  height: 16px;
+  margin: .1em 5px 0 0;
+  padding: 0;
+  width: 16px;
+}
+/* line 150, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_description {
+  border-bottom: 1px dotted #ccc;
+  clear: both;
+  display: inline-block;
+  margin: 0 0 1em;
+}
+/* line 156, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_description[class] {
+  display: block;
+}
+/* line 159, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_description h2 {
+  clear: left;
+  font-size: 160%;
+  font-weight: 400;
+  margin: 0 0 3px;
+}
+/* line 165, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_description p {
+  font-size: 95%;
+  line-height: 130%;
+  margin: 0 0 12px;
+}
+/* line 170, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form hr {
+  display: none;
+}
+/* line 173, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li.section_break {
+  border-top: 1px dotted #ccc;
+  margin-top: 9px;
+  padding-bottom: 0;
+  padding-left: 9px;
+  padding-top: 13px;
+  width: 97% !important;
+}
+/* line 181, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form ul li.first {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+/* line 186, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form .section_break h3 {
+  font-size: 110%;
+  font-weight: 400;
+  line-height: 130%;
+  margin: 0 0 2px;
+}
+/* line 192, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form .section_break p {
+  font-size: 85%;
+  margin: 0 0 10px;
+}
+/* line 197, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.button_text {
+  overflow: visible;
+  padding: 0 7px;
+  width: auto;
+}
+/* line 202, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .buttons input {
+  font-size: 120%;
+  margin-right: 5px;
+}
+/* line 207, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container label.description {
+  border: none;
+  color: #222;
+  display: block;
+  font-size: 95%;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 0 0 1px;
+}
+/* line 216, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container span.symbol {
+  font-size: 115%;
+  line-height: 130%;
+}
+/* line 220, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.text {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-top: 1px solid #7c7c7c;
+  color: #333;
+  font-size: 100%;
+  margin: 0;
+  padding: 2px 0;
+}
+/* line 231, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.file {
+  color: #333;
+  font-size: 100%;
+  margin: 0;
+  padding: 2px 0;
+}
+/* line 237, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container textarea.textarea {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-top: 1px solid #7c7c7c;
+  color: #333;
+  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  width: 99%;
+}
+/* line 249, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container select.select {
+  color: #333;
+  font-size: 100%;
+  margin: 1px 0;
+  padding: 1px 0 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-top: 1px solid #7c7c7c;
+}
+/* line 260, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.currency {
+  text-align: right;
+}
+/* line 263, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.checkbox {
+  display: block;
+  height: 13px;
+  line-height: 1.4em;
+  margin: 6px 0 0 3px;
+  width: 13px;
+}
+/* line 270, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.radio {
+  display: block;
+  height: 13px;
+  line-height: 1.4em;
+  margin: 6px 0 0 3px;
+  width: 13px;
+}
+/* line 277, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container label.choice {
+  color: #444;
+  display: block;
+  font-size: 100%;
+  line-height: 1.4em;
+  margin: -1.55em 0 0 25px;
+  padding: 4px 0 5px;
+  width: 90%;
+}
+/* line 286, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container select.select[class] {
+  margin: 0;
+  padding: 1px 0;
+}
+/* line 290, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container *:first-child + html select.select[class] {
+  margin: 1px 0;
+}
+/* line 293, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .safari select.select {
+  font-size: 120% !important;
+  margin-bottom: 1px;
+}
+/* line 297, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.small {
+  width: 25%;
+}
+/* line 300, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container select.small {
+  width: 25%;
+}
+/* line 303, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.medium {
+  width: 50%;
+}
+/* line 306, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container select.medium {
+  width: 50%;
+}
+/* line 309, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container input.large {
+  width: 99%;
+}
+/* line 312, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container select.large {
+  width: 100%;
+}
+/* line 315, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container textarea.small {
+  height: 5.5em;
+}
+/* line 318, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container textarea.medium {
+  height: 10em;
+}
+/* line 321, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container textarea.large {
+  height: 20em;
+}
+/* line 325, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #error_message {
+  background: #fff;
+  border: 1px dotted red;
+  margin-bottom: 1em;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 4px;
+  text-align: center;
+  width: 99%;
+}
+/* line 335, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #error_message_title {
+  color: #DF0000;
+  font-size: 125%;
+  margin: 7px 0 5px;
+  padding: 0;
+}
+/* line 341, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #error_message_desc {
+  color: #000;
+  font-size: 100%;
+  margin: 0 0 .8em;
+}
+/* line 346, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #error_message_desc strong {
+  background-color: #FFDFDF;
+  color: red;
+  padding: 2px 3px;
+}
+/* line 351, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li.error {
+  background-color: #FFDFDF !important;
+  border-bottom: 1px solid #EACBCC;
+  border-right: 1px solid #EACBCC;
+  margin: 3px 0;
+}
+/* line 357, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li.error label {
+  color: #DF0000 !important;
+}
+/* line 360, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form p.error {
+  clear: both;
+  color: red;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+/* line 367, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form .required {
+  color: red;
+  float: none;
+  font-weight: 700;
+}
+/* line 373, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li.highlighted {
+  background-color: #fff7c0;
+}
+/* line 376, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form .guidelines {
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  color: #444;
+  font-size: 80%;
+  left: 100%;
+  line-height: 130%;
+  margin: 0 0 0 8px;
+  padding: 8px 10px 9px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 42%;
+  z-index: 1000;
+}
+/* line 391, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form .guidelines small {
+  font-size: 105%;
+}
+/* line 394, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li.highlighted .guidelines {
+  visibility: visible;
+}
+/* line 397, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container form li:hover .guidelines {
+  visibility: visible;
+}
+/* line 400, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .no_guidelines .guidelines {
+  display: none !important;
+}
+/* line 403, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .no_guidelines form li {
+  width: 97%;
+}
+/* line 406, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .no_guidelines li.section {
+  padding-left: 9px;
+}
+/* line 410, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_success {
+  clear: both;
+  margin: 0;
+  padding: 90px 0pt 100px;
+  text-align: center;
+}
+/* line 416, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .form_success h2 {
+  clear: left;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0pt 0pt 3px;
+}
+/* line 423, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container ul.password {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+/* line 428, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .password h2 {
+  color: #DF0000;
+  font-weight: bold;
+  margin: 0pt auto 10px;
+}
+/* line 433, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .password input.text {
+  font-size: 170% !important;
+  width: 380px;
+  text-align: center;
+}
+/* line 438, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .password label {
+  display: block;
+  font-size: 120% !important;
+  padding-top: 10px;
+  font-weight: bold;
+}
+/* line 444, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #li_captcha {
+  padding-left: 5px;
+}
+/* line 447, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container #li_captcha span {
+  float: none;
+}
+/* line 451, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed #form_container {
+  border: none;
+}
+/* line 454, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed #top,
+#form_container .embed #bottom,
+#form_container .embed h1 {
+  display: none;
+}
+/* line 459, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed #form_container {
+  width: 100%;
+}
+/* line 462, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed #footer {
+  text-align: left;
+  padding-left: 10px;
+  width: 99%;
+}
+/* line 467, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed #footer.success {
+  text-align: center;
+}
+/* line 470, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+#form_container .embed form.appnitro {
+  margin: 0px 0px 0;
+}
+
+/*** Calendar **********************/
+/* line 477, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+div.calendar {
+  position: relative;
+}
+
+/* line 481, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar table {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  color: #000;
+  background: #fff;
+  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+/* line 490, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .button {
+  text-align: center;
+  padding: 2px;
+}
+
+/* line 495, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .nav {
+  background: #f5f5f5;
+}
+
+/* line 499, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .title {
+  font-weight: bold;
+  text-align: center;
+  background: #dedede;
+  color: #000;
+  padding: 2px 0 3px 0;
+}
+
+/* line 507, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .headrow {
+  background: #f5f5f5;
+  color: #444;
+  font-weight: bold;
+}
+
+/* line 513, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .daynames {
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 519, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .name {
+  border-bottom: 1px dotted #ccc;
+  padding: 2px;
+  text-align: center;
+  color: #000;
+}
+
+/* line 526, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .weekend {
+  color: #666;
+}
+
+/* line 530, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .hilite {
+  background-color: #444;
+  color: #fff;
+  padding: 1px;
+}
+
+/* line 536, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar thead .active {
+  background-color: #d12f19;
+  color: #fff;
+  padding: 2px 0px 0px 2px;
+}
+
+/* line 542, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .day {
+  width: 1.8em;
+  color: #222;
+  text-align: right;
+  padding: 2px 2px 2px 2px;
+}
+
+/* line 549, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .day.othermonth {
+  font-size: 80%;
+  color: #bbb;
+}
+
+/* line 554, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .day.othermonth.oweekend {
+  color: #fbb;
+}
+
+/* line 558, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar table .wn {
+  padding: 2px 2px 2px 2px;
+  border-right: 1px solid #000;
+  background: #666;
+}
+
+/* line 564, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .rowhilite td {
+  background: #FFF1AF;
+}
+
+/* line 568, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .rowhilite td.wn {
+  background: #FFF1AF;
+}
+
+/* line 572, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody td.hilite {
+  padding: 1px 1px 1px 1px;
+  background: #444 !important;
+  color: #fff !important;
+}
+
+/* line 578, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody td.active {
+  color: #fff;
+  background: #529214 !important;
+  padding: 2px 2px 0px 2px;
+}
+
+/* line 584, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody td.selected {
+  font-weight: bold;
+  border: 1px solid #888;
+  padding: 1px 1px 1px 1px;
+  background: #f5f5f5 !important;
+  color: #222 !important;
+}
+
+/* line 592, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody td.weekend {
+  color: #666;
+}
+
+/* line 596, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody td.today {
+  font-weight: bold;
+  color: #529214;
+  background: #D9EFC2;
+}
+
+/* line 602, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .disabled {
+  color: #999;
+}
+
+/* line 606, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .emptycell {
+  visibility: hidden;
+}
+
+/* line 610, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tbody .emptyrow {
+  display: none;
+}
+
+/* line 614, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tfoot .footrow {
+  text-align: center;
+  background: #556;
+  color: #fff;
+}
+
+/* line 620, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tfoot .ttip {
+  background: #222;
+  color: #fff;
+  font-size: 10px;
+  border-top: 1px solid #dedede;
+  padding: 3px;
+}
+
+/* line 628, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tfoot .hilite {
+  background: #aaf;
+  border: 1px solid #04f;
+  color: #000;
+  padding: 1px;
+}
+
+/* line 635, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar tfoot .active {
+  background: #77c;
+  padding: 2px 0px 0px 2px;
+}
+
+/* line 640, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 4em;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 90%;
+  z-index: 100;
+}
+
+/* line 653, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .combo .label,
+.calendar .combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+
+/* line 659, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .combo .label-IEfix {
+  width: 4em;
+}
+
+/* line 663, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .combo .hilite {
+  background: #444;
+  color: #fff;
+}
+
+/* line 668, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/alumni_form.scss */
+.calendar .combo .active {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #dedede;
+  font-weight: bold;
+}
