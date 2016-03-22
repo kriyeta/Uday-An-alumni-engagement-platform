@@ -1,13 +1,13 @@
-<div id="form_container_wrapper">
-  <div id="form_container">
+<div id="devise_form_container_wrapper">
+  <div id="devise_form_container">
     <ul class="list-unstyled">
       <li><h3 class="form-heading">LOG IN</h3></li>
     </ul>
-    <table style="border: 3px groove #e76b00; border-radius: 5px;" class="alumni-form" width="100%">
+    <table style="border: 3px groove #e76b00; border-radius: 5px;" class="devise-form-table" width="100%">
       <tr>
         <td style="padding: 10px; border-right: 5px inset white;" valign="top">
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'alumni-form'}) do |f| %>
-              <ul>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'devise-form'}) do |f| %>
+              <ul style="list-style-type: none;">
                 <li>
                   <%= f.label :email %>
                 </li>
@@ -22,12 +22,16 @@
                 <li><%= f.submit "Sign in", :style => 'background-color:#e76b00;' %></li>
               </ul>
           <% end %>
-          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-              <%= link_to "Sign up via Email", new_registration_path(resource_name) %><br />
-          <% end -%>
-          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-              <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-          <% end -%>
+          <ul style="list-style-type: none;">
+            <li>
+              <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                  <%= link_to "Sign up via Email", new_registration_path(resource_name) %><br/>
+              <% end -%>
+              <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br/>
+              <% end -%>
+            </li>
+          </ul>
         </td>
         <td style="padding: 20px;" valign="top">
           <%= render 'home_page/pages_without_signin/signin_signup_widget' %>

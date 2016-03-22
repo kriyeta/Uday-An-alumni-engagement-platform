@@ -1,10 +1,10 @@
-<div id="form_container_wrapper">
-  <div id="form_container">
-    <table style="border: 3px groove #e76b00; border-radius: 5px;" class="alumni-form" width="100%">
+<div id="devise_form_container_wrapper">
+  <div id="devise_form_container">
+    <table style="border: 3px groove #e76b00; border-radius: 5px;" class="devise-form-table" width="100%">
       <tr>
         <td style="padding: 10px;" valign="top">
           <h2>Edit <%= resource_name.to_s.humanize %></h2>
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class:"devise-form" }) do |f| %>
               <%= devise_error_messages! %>
               <div class="field">
                 <%= f.label :email %><br />
