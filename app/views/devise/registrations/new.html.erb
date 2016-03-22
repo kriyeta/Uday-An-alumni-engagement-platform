@@ -1,33 +1,45 @@
-<div class="section general-container">
-  <div class="container">
-    <div class="row">
-      <h2>Sign up</h2>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-      <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, :required => true, autofocus: true %>
-      </div>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, :required => true %>
-      </div>
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, :required => true, autocomplete: "off" %>
-      </div>
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, :required => true, autocomplete: "off" %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
-      <% end %>
-      <%= render "devise/shared/links" %>
-    </div>
+<div id="form_container_wrapper">
+  <div id="form_container">
+    <ul class="list-unstyled">
+      <li><h3 class="form-heading">SIGN UP USING EMAIL</h3></li>
+    </ul>
+    <table style="border: 3px groove #e76b00; border-radius: 5px;" class="alumni-form" width="100%">
+      <tr>
+        <td style="padding: 10px; border-right: 5px inset white;" valign="top">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+              <%= devise_error_messages! %>
+              <ul>
+                <li>
+                  <%= f.label :name %><br/>
+                  <%= f.text_field :name, :required => true, autofocus: true %>
+                </li>
+                <li>
+                  <%= f.label :email %><br/>
+                  <%= f.email_field :email, :required => true %>
+                </li>
+                <li>
+                  <%= f.label :password %>
+                  <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br/>
+                  <%= f.password_field :password, :required => true, autocomplete: "off" %>
+                </li>
+                <li>
+                  <%= f.label :password_confirmation %><br/>
+                  <%= f.password_field :password_confirmation, :required => true, autocomplete: "off" %>
+                </li>
+
+                <li>
+                <li><%= f.submit "Sign up", :style => 'background-color:#e76b00;' %></li>
+                </li>
+              </ul>
+          <% end %>
+        </td>
+        <td style="padding: 20px;" valign="top">
+          <%= render 'home_page/pages_without_signin/signin_signup_widget' %>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
