@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/upcoming_events', to: 'home_page#upcoming_events'
   get '/all_events', to: 'home_page#all_events'
   get '/agendas', to: 'home_page#agendas'
+  get '/my_profile', to: 'alumni#my_profile'
   get '/alumni_personal_info', to: 'alumni#alumni_personal_info_form'
   get '/alumni_schooling_info', to: 'alumni#alumni_schooling_info_form'
   get '/alumni_current_location_n_occupation_info', to: 'alumni#alumni_current_location_n_occupation_info_form'

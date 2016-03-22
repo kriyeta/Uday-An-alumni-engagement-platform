@@ -1,18 +1,29 @@
 #form_container_wrapper {
   width: 100%;
-  background: #FFE0B2;
-  margin: 0 auto;
 }
 
-#form_container {
-  background: #FFCC80;
+#alumni_profile_container{
   padding-top: 70px;
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
-  form.appnitro {
-    margin: 20px 20px 0;
-    padding: 0 0 20px;
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+#alumni_profile{
+  background-color: #FFCC80;
+}
+
+#form_container {
+  padding-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-bottom: 20px;
+
+  .alumni-form {
+    background: #FFCC80;
+    padding: 5px;
   }
   /**** Logo Section  *****/
   h1 {
@@ -29,7 +40,7 @@
     min-height: 40px;
     overflow: hidden;
   }
-  .form-heading{
+  .form-heading {
     color: #d9534f;
     font-family: "Helvetica Neue", "Arial", sans-serif;
     font-weight: bolder;

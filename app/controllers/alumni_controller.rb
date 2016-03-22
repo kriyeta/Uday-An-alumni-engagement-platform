@@ -7,4 +7,7 @@ class AlumniController < ApplicationController
   
   def alumni_personal_info_form
   end
+
+  def my_profile
+  end
 end

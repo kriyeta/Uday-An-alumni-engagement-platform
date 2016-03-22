@@ -1,10 +1,11 @@
 <div id="form_container_wrapper">
   <div id="form_container">
-
-    <form class="appnitro" method="post" action="/update_alumni_information">
+    <ul class="list-unstyled">
+      <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (2/3)</h3></li>
+    </ul>
+    <form class="alumni-form" method="post" action="/update_alumni_information">
       <ul>
-        <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (2/3)</h3></li>
-        <li class="section_break">
+        <li>
           <h3>SCHOOLING INFORMATION:</h3>
           <p></p>
         </li>
@@ -12,7 +13,9 @@
           <label class="description" for="passout_school">Passout School: </label>
           <div>
             <select class="element select large" id="passout_school" name="passout_school">
-              <option value="Saraswati Vidya Mandir Inter College" selected="selected">Saraswati Vidya Mandir Inter College</option>
+              <option value="Saraswati Vidya Mandir Inter College" selected="selected">Saraswati Vidya Mandir Inter
+                College
+              </option>
               <option value="Saraswati Sishu Mandir">Saraswati Sishu Mandir</option>
             </select>
             <script type="text/javascript">
@@ -46,12 +49,12 @@
           <label class="description" for="passout_year">Passout Year: </label>
           <div>
             <select class="element select large" id="passout_year" name="passout_year">
-              <%= current_year  = Time.now.year %>
+              <%= current_year = Time.now.year %>
               <%= i = current_year+2 %>
-              <%  while i > 1969 %>
+              <% while i > 1969 %>
                   <option value='<%= i %>'><%= i %></option>
-              <%= i=i-1 %>
-              <%  end %>
+                  <%= i=i-1 %>
+              <% end %>
             </select>
             <script type="text/javascript">
               document.getElementById('passout_year').value = "<%= current_user.passout_year || current_year %>";
