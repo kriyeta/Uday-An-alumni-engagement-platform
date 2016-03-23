@@ -3,7 +3,7 @@
     <ul class="list-unstyled">
       <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (1/3)</h3></li>
     </ul>
-    <form class="alumni-form" method="post" action="/update_alumni_information">
+    <form class="alumni-form" method="post" action="/update_alumni_personal_info">
       <ul>
         <li>
           <h3>PERSONAL DETAILS :</h3>
@@ -41,7 +41,7 @@
           <label class="description" for="element_3">Mobile *: </label>
           <div>
 
-            <select id="countryCode" class="element select small">
+            <select id="countryCode" name="mobile_countryCode" class="element select small" required>
               <option data-countryCode="IN" value="91" Selected>India (+91)</option>
               <option data-countryCode="GB" value="44">UK (+44)</option>
               <option data-countryCode="US" value="1">USA (+1)</option>
@@ -264,7 +264,7 @@
             <script type="text/javascript">
               document.getElementById('countryCode').value = "<%= current_user.mobile.try(:split, "-").try(:first)||"91" %>";
             </script>
-            <input id="element_3" name="mobile" class="element text medium" type="text" maxlength="255" value="<%= current_user.mobile.try(:split, "-").try(:second) %>">
+            <input id="element_3" name="mobile" class="element text medium" type="text" maxlength="255" value="<%= current_user.mobile.try(:split, "-").try(:second) %>" required>
           </div>
         </li>
         <li id="li_4">

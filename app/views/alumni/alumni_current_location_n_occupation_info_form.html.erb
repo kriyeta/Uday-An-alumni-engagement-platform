@@ -3,7 +3,7 @@
     <ul class="list-unstyled">
       <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (3/3)</h3></li>
     </ul>
-    <form class="alumni-form" method="post" action="/update_alumni_information">
+    <form class="alumni-form" method="post" action="/update_alumni_current_location_n_occupation_info">
       <ul>
 
         <li>
@@ -239,20 +239,23 @@
         <li id="li_17">
           <label class="description" for="element_17">What do you do? </label>
           <div>
-            <select class="element select large" id="element_17" name="what_do_you_do">
-              <option value="1">Student</option>
-              <option value="2" selected="selected">Employed</option>
-              <option value="3">Self Employed</option>
-              <option value="4">Business</option>
-              <option value="5">Other</option>
+            <select class="element select large" id="what_do_you_do" name="what_do_you_do">
+              <option value="Student">Student</option>
+              <option value="Employed" selected="selected">Employed</option>
+              <option value="Self Employed">Self Employed</option>
+              <option value="Business">Business</option>
+              <option value="Other">Other</option>
 
             </select>
+            <script type="text/javascript">
+              document.getElementById('what_do_you_do').value = "<%= current_user.try(:current_occupation_status) ||"Employed" %>";
+            </script>
           </div>
         </li>
         <li id="li_13">
           <label class="description" for="element_13">Occupation Details: </label>
           <div>
-            <textarea id="element_13" name="what_do_you_do_details" class="element textarea small"></textarea>
+            <textarea id="element_13" name="what_do_you_do_details" class="element textarea small"><%= current_user.try(:current_occupation_status_details) %></textarea>
           </div>
           <p class="guidelines" id="guide_13">
             <small>Please enter more helpful information for What do you do? selection</small>
@@ -260,8 +263,8 @@
         </li>
 
         <li>
-          <input class="next-button" style="width: 49%;" id="goBack" align="left" type="submit" name="personal-info-next" value="Previous">
-          <input class="next-button" style="width: 49%;" id="saveForm" align="right" type="submit" name="personal-info-next" value="Finish">
+          <%= link_to '<button class="next-button" style="width: 49%; color:white;" id="goBack" align="left" name="go_back_to_schooling-info">Previous</button>'.html_safe, alumni_schooling_info_path %>
+          <input class="next-button" style="width: 49%;" id="saveForm" align="right" type="submit" name="alumni_current_location_n_occupation_info_finish" value="Finish">
         </li>
       </ul>
     </form>

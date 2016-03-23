@@ -1,5 +1,14 @@
 <div id="form_container_wrapper">
   <div id="alumni_profile_container">
+    <div class="row">
+      <div class="col-md-12" style="text-align: center;">
+        <% if !flash.nil? %>
+            <% flash.each do |key, value| %>
+                <div style="color:green;" class="alert alert-<%= key %>"><%= value %></div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
     <div class="section" id="alumni_profile">
       <div class="container">
         <div class="row">

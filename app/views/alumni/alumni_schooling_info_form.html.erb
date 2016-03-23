@@ -3,7 +3,7 @@
     <ul class="list-unstyled">
       <li><h3 class="form-heading">PLEASE UPDATE YOUR INFORMATION (2/3)</h3></li>
     </ul>
-    <form class="alumni-form" method="post" action="/update_alumni_information">
+    <form class="alumni-form" method="post" action="/update_alumni_schooling_info">
       <ul>
         <li>
           <h3>SCHOOLING INFORMATION:</h3>
@@ -63,8 +63,8 @@
         </li>
 
         <li>
-          <input class="next-button" style="width: 49%;" id="goBack" align="left" type="submit" name="personal-info-next" value="Previous">
-          <input class="next-button" style="width: 49%;" id="saveForm" align="right" type="submit" name="personal-info-next" value="Next">
+          <%= link_to '<button class="next-button" style="width: 49%; color:white;" id="goBack" align="left" name="go_back_to_personal-info">Previous</button>'.html_safe, alumni_personal_info_path %>
+          <input class="next-button" style="width: 49%;" id="saveForm" align="right" type="submit" name="schooling-info-next" value="Next">
         </li>
       </ul>
     </form>

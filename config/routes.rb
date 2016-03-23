@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   get '/alumni_personal_info', to: 'alumni#alumni_personal_info_form'
   get '/alumni_schooling_info', to: 'alumni#alumni_schooling_info_form'
   get '/alumni_current_location_n_occupation_info', to: 'alumni#alumni_current_location_n_occupation_info_form'
-  post '/update_alumni_information', to: 'alumni#update_alumni_information'
+  post '/update_alumni_personal_info', to: 'alumni#update_alumni_personal_info'
+  post '/update_alumni_schooling_info', to: 'alumni#update_alumni_schooling_info'
+  post '/update_alumni_current_location_n_occupation_info', to: 'alumni#update_alumni_current_location_n_occupation_info'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
