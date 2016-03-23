@@ -48,7 +48,7 @@
                       <li><b><%= current_user.email %></b></li>
                   <% end %>
                   <% if !current_user.try(:permanent_address).nil? %>
-                      <li><b>Permanent Address: </b><br><%= current_user.try(:permanent_address) %></li>
+                      <li><b>Permanent Address: </b><br>&nbsp;&nbsp;&nbsp;<%= current_user.try(:permanent_address) %></li>
                   <% end %>
                   <% if !current_user.try(:passout_school).nil? || !current_user.try(:passout_class).nil? || !current_user.try(:passout_year).nil? %>
                       <hr>
@@ -66,13 +66,13 @@
                       <hr>
                   <% end %>
                   <% if !current_user.try(:current_address).nil? %>
-                      <li><b>Current Address:</b><br><%= current_user.try(:current_address) %></li>
+                      <li><b>Current Address:</b><br>&nbsp;&nbsp;&nbsp;<%= current_user.try(:current_address) %></li>
                   <% end %>
                   <% if !current_user.try(:current_city).nil? %>
                       <li><b>City: </b><%= current_user.try(:current_city) %></li>
                   <% end %>
                   <% if !current_user.try(:current_zipcode).nil? %>
-                      -<%= current_user.try(:current_zipcode) %>
+                      <li><b>Zipcode: </b><%= current_user.try(:current_zipcode) %></li>
                   <% end %>
                   <% if !current_user.try(:current_country).nil? %>
                       <li><b><%= current_user.try(:current_country) %></b></li>

@@ -31,6 +31,7 @@ class AlumniController < ApplicationController
     p "@@@@@@@@@@@", params
     user = User.where(:id => current_user.id).update_all(:current_address => params[:current_address],
                                                          :current_city => params[:current_address_city],
+                                                         :current_zipcode => params[:current_address_zip],
                                                          :current_country => params[:current_address_country],
                                                          :current_occupation_status => params[:what_do_you_do],
                                                          :current_occupation_status_details => params[:what_do_you_do_details])

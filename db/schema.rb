@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160122164318) do
     t.string   "mobile"
     t.string   "current_city"
     t.string   "current_country"
+    t.string   "current_zipcode"
     t.string   "current_address"
     t.string   "permanent_address"
     t.string   "current_occupation_status"
