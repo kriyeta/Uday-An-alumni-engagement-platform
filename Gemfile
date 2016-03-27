@@ -26,7 +26,6 @@ gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
-gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -71,4 +70,4 @@ gem "figaro"
 gem 'pg_search'
 
 #will_paginate is a pagination library that integrates with Ruby on Rails
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.0.7'

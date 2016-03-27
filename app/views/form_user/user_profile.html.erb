@@ -1,0 +1,101 @@
+<div id="form_container_wrapper">
+  <div id="alumni_profile_container">
+    <div class="section" id="alumni_profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <% if @user_profile.identities.first.nil? %>
+                  <%= image_tag('avatar_placeholder.png', :alt => "profile image", :width => "100%", :class => "img-responsive", :style => "border: 1px solid white; border-radius: 5px;") %>
+              <% else %>
+                  <%= image_tag(@user_profile.identities.first.image + "?type=large", :width => "100%", :alt => "profile image", :class => "img-responsive", :style => "border-radius: 5px;") %>
+              <% end %>
+
+              <div class="caption">
+                <table width="100%" style="margin-bottom:-40px;">
+                  <tr>
+                    <td width="95%">
+                      <hr/>
+                    </td>
+                    <td style="width:1px; padding-left:5px; padding-right:5px; white-space: nowrap;"><%= update_link %></td>
+                    <td>
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+                ​
+                <h3><%= @user_profile.name %></h3>
+                <ul class="list-unstyled">
+                  <% if !@user_profile.try(:gender).nil? %>
+                      <li><b>Gender: </b><%= @user_profile.try(:gender).camelize %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:date_of_birth).nil? %>
+                      <li><b>DOB: </b><%= @user_profile.date_of_birth.strftime("%d/%b/%Y") %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:mobile).nil? %>
+                      <li><b><%= "+"+@user_profile.try(:mobile).to_s %></b></li>
+                  <% end %>
+                  <% if !@user_profile.email.nil? %>
+                      <li><b><%= @user_profile.email %></b></li>
+                  <% end %>
+                  <% if !@user_profile.try(:permanent_address).nil? %>
+                      <li><b>Permanent Address: </b><br>&nbsp;&nbsp;&nbsp;<%= @user_profile.try(:permanent_address) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:passout_school).nil? || !@user_profile.try(:passout_class).nil? || !@user_profile.try(:passout_year).nil? %>
+                      <hr>
+                  <% end %>
+                  <% if !@user_profile.try(:passout_school).nil? %>
+                      <li><b><%= @user_profile.try(:passout_school) %></b></li>
+                  <% end %>
+                  <% if !@user_profile.try(:passout_class).nil? %>
+                      <li><b>Passout Class: </b><%= @user_profile.try(:passout_class) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:passout_year).nil? %>
+                      <li><b>Passout Year: </b><%= @user_profile.try(:passout_year) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_address).nil? || !@user_profile.try(:current_city).nil? || !@user_profile.try(:current_zipcode).nil?|| !@user_profile.try(:current_country).nil?|| !@user_profile.try(:current_occupation_status_details).nil?|| !@user_profile.try(:current_occupation_status).nil? %>
+                      <hr>
+                  <% end %>
+                  <% if !@user_profile.try(:current_address).nil? %>
+                      <li><b>Current Address:</b><br>&nbsp;&nbsp;&nbsp;<%= @user_profile.try(:current_address) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_city).nil? %>
+                      <li><b>City: </b><%= @user_profile.try(:current_city) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_zipcode).nil? %>
+                      <li><b>Zipcode: </b><%= @user_profile.try(:current_zipcode) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_country).nil? %>
+                      <li><b><%= @user_profile.try(:current_country) %></b></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_occupation_status).nil? %>
+                      <li><%= @user_profile.try(:current_occupation_status) %></li>
+                  <% end %>
+                  <% if !@user_profile.try(:current_occupation_status_details).nil? %>
+                      <li><%= @user_profile.try(:current_occupation_status_details) %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+                <div class="media-body"><h4 class="media-heading">Media heading</h4>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                    Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p></div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+                <div class="media-body"><h4 class="media-heading">Media heading</h4>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                    Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

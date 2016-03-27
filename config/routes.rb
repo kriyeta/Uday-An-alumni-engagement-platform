@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
     get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
   end
-  
+
+  get '/user_profile', to: 'form_user#user_profile'
+
   get 'meets_or_events/upcoming_events'
 
   get 'meets_or_events/all_events'

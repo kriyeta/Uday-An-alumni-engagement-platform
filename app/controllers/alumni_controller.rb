@@ -1,6 +1,5 @@
 class AlumniController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :authenticate_user!
 
   def update_alumni_personal_info
     mobile = params[:mobile_countryCode].to_s+"-"+params[:mobile].to_s

@@ -1,2 +1,46 @@
-<h1>Search#search</h1>
-<p>Find me in app/views/search/search.html.erb</p>
+<div id="form_container_wrapper">
+  <div id="alumni_profile_container">
+    <div class="section" id="alumni_profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            &nbsp;
+          </div>
+          <div class="col-md-9">
+            <ul class="media-list">
+              <% for form_user in @form_users %>
+                  <li class="media">
+                    <%= link_to user_profile_path(:id=>form_user), :class => "pull-left" do %>
+                        <% if form_user.identities.first.nil? %>
+                            <%= image_tag('avatar_placeholder.png', :alt => "profile image", :width => "50px", :height => "60px", :class => "img-responsive", :style => "border: 1px solid white; border-radius: 5px;") %>
+                        <% else %>
+                            <%= image_tag(form_user.identities.first.image + "?type=small", :width => "50px", :height => "60px", :alt => "profile image", :class => "img-responsive", :style => "border-radius: 5px;") %>
+                        <% end %>
+                    <% end %>
+                    <div class="media-body">
+                      <h4 class="media-heading"><%= form_user.name %>, <%= form_user.passout_year %></h4>
+                      <p>
+                        <%= display_str="| " %>
+                        <% if !form_user.current_city.nil? %>
+                            <%= form_user.current_city+" | " %>
+                        <% end %>
+                        <% if !form_user.current_country.nil? %>
+                            <%= form_user.current_country+" | " %>
+                        <% end %>
+                        <% if !form_user.current_occupation_status.nil? %>
+                            <%= form_user.current_occupation_status+" | " %>
+                        <% end %>
+                        <% if !form_user.current_occupation_status_details.nil? %>
+                            <%= form_user.current_occupation_status_details+" | " %>
+                        <% end %>
+                      </p></div>
+                  </li>
+              <% end %>
+            </ul>
+            <%= will_paginate @form_users %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
