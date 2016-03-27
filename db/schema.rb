@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122164318) do
+ActiveRecord::Schema.define(version: 20160327172253) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "pg_trgm"
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -29,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160122164318) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                             default: "", null: false
@@ -61,7 +65,11 @@ ActiveRecord::Schema.define(version: 20160122164318) do
     t.string   "preferred_time_of_contact"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["current_city"], name: "index_users_on_current_city", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["passout_year"], name: "index_users_on_passout_year", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "identities", "users"
 end

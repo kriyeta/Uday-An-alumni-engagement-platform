@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use Postgresql as the database for Active Record
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -66,3 +66,9 @@ gem 'google-api-client', require: 'google/api_client'
 
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem "figaro"
+
+#PgSearch builds named scopes that take advantage of PostgreSQL's full text search.
+gem 'pg_search'
+
+#will_paginate is a pagination library that integrates with Ruby on Rails
+gem 'will_paginate'

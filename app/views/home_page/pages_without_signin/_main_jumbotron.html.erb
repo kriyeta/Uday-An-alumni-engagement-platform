@@ -6,12 +6,12 @@
 
           <div class="row" style="padding-top:10%;">
             <div class="col-md-offset-3 col-md-6">
-              <form role="form">
+              <form role="form" method="get" id="search_form" action="/search">
                 <div class="form-group">
                   <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" placeholder="Search by name, class, location, employer etc">
+                    <input type="text" class="form-control" name="alumni_search_query" placeholder="Search by name, class, location, employer etc">
                                         <span class="input-group-btn">
-                                                    <a class="btn btn-lg btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-search"></i></a>
+                                                    <a class="btn btn-lg btn-primary" href="javascript:{}" onclick="document.getElementById('search_form').submit(); return false;"><i class="fa fa-fw fa-lg fa-search"></i></a>
                                                 </span>
                   </div>
                   <p class="help-block">Eg. Kamal, 10th, indeed, hyderabad etc.</p>
