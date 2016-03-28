@@ -71,3 +71,5 @@ gem 'pg_search'
 
 #will_paginate is a pagination library that integrates with Ruby on Rails
 gem 'will_paginate', '~> 3.0.7'
+
+gem 'rails_12factor'
