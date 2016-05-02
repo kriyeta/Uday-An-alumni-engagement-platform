@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 20160327172253) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
+  enable_extension "fuzzystrmatch"
+  enable_extension "unaccent"
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
