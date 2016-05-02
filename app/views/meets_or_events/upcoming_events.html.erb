@@ -1,2 +1,48 @@
-<h1>MeetsOrEvents#upcoming_events</h1>
-<p>Find me in app/views/meets_or_events/upcoming_events.html.erb</p>
+<div class="section upcoming-events-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-warning">
+          <i class="fa fa-fw fa-group fa-lg"></i>Upcoming Meets/Events</h3>
+      </div>
+    </div>
+    <%= render 'home_page/pages_without_signin/events_search', {search_message: "Eg. 25/12/2015, anual meet, by name 'kamal' etc."} %>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="media-list">
+          <li class="media">
+            <a class="pull-left" href="#"><img class="media-object" src="https://unsplash.imgix.net/photo-1423683249427-8ca22bd873e0?w=1024&amp;q=50&amp;fm=jpg&amp;s=5e57c661d0f772ce269188a6f5325708" height="64" width="64"></a>
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+            </div>
+          </li>
+        </ul>
+        <ul class="pagination">
+          <li>
+            <a href="#">Prev</a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#">Next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

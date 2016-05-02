@@ -5,14 +5,7 @@ Rails.application.routes.draw do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
     get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
   end
-
   get '/user_profile', to: 'form_user#user_profile'
-
-  get 'meets_or_events/upcoming_events'
-
-  get 'meets_or_events/all_events'
-
-  get 'meets_or_events/agendas'
 
   # get 'home_page/home'
 
@@ -21,9 +14,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home_page#home'
-  get '/upcoming_events', to: 'home_page#upcoming_events'
-  get '/all_events', to: 'home_page#all_events'
-  get '/agendas', to: 'home_page#agendas'
+
+  # Meets or events
+  get '/upcoming_events', to: 'meets_or_events#upcoming_events'
+  get '/all_events', to: 'meets_or_events#all_events'
+  get '/agendas', to: 'meets_or_events#agendas'
 
   # Alumni routes
   get '/my_profile', to: 'alumni#my_profile'
@@ -34,7 +29,7 @@ Rails.application.routes.draw do
   post '/update_alumni_schooling_info', to: 'alumni#update_alumni_schooling_info'
   post '/update_alumni_current_location_n_occupation_info', to: 'alumni#update_alumni_current_location_n_occupation_info'
 
-  #website status
+  # Website status
   get '/website_under_construction', to: 'website_status#under_construction'
   get '/website_page_under_construction', to: 'website_status#page_under_construction'
   get '/website_under_maintenance', to: 'website_status#under_maintenance'
