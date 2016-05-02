@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   add_flash_types :success, :warning, :danger, :info
   before_action :authenticate_user!
+
+  def website_status
+    #renders with views/layouts/fullwidth.html.erb
+  end
 end
