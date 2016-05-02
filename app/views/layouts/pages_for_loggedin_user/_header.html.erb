@@ -10,69 +10,7 @@
       <a href="/" id="logo"><%= image_tag('logo.png', :alt => "Logo", :class => "img-rounded", :height => '48px', :style => "align:center; border: 2px solid white; border-radius: 10px;margin-right:5px;margin-top:1px;") %></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-      <ul class="header-menu-nav lead nav navbar-left navbar-nav header-menu">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="et-down fa fa-lg fa-sort-down pull-right s"></i>Directory<br></a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="#">By Search</a>
-            </li>
-            <li>
-              <a href="#">By Location</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="et-down fa fa-lg fa-sort-down pull-right s"></i>Meets/Events<br></a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="/upcoming_events">Upcoming</a>
-            </li>
-            <li>
-              <a href="/agendas">Agendas</a>
-            </li>
-            <li>
-              <a href="/all_events">All</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="et-down fa fa-lg fa-sort-down pull-right s"></i>Careers<br></a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="#">Jobs</a>
-            </li>
-            <li>
-              <a href="#">Internship</a>
-            </li>
-          </ul>
-        </li>
-        <li class="">
-          <a href="#">Donations</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="et-down fa fa-lg fa-sort-down pull-right s"></i>More<br></a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="#">Photo Gallery</a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="#">News Letter</a>
-            </li>
-            <li>
-              <a href="#">Campus Stories</a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Downloads</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <%= render 'layouts/static_header' %>
       <% is_not_profile_complete = (current_user.email.nil? or
           current_user.name.nil? or
           current_user.passout_class.nil? or

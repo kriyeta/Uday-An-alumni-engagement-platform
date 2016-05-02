@@ -34,6 +34,11 @@ Rails.application.routes.draw do
   post '/update_alumni_schooling_info', to: 'alumni#update_alumni_schooling_info'
   post '/update_alumni_current_location_n_occupation_info', to: 'alumni#update_alumni_current_location_n_occupation_info'
 
+  #website status
+  get '/website_under_construction', to: 'website_status#under_construction'
+  get '/website_page_under_construction', to: 'website_status#page_under_construction'
+  get '/website_under_maintenance', to: 'website_status#under_maintenance'
+
   # Search routes
   get '/search', to: 'search#search'
 
