@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # Routing all request to website under construction
+  # get '/website_under_construction', to: 'website_status#under_construction'
+  # match '/' => redirect('/website_under_construction'), via: [:get, :post]
+  # match '*path' => redirect('/website_under_construction'), via: [:get, :post]
+
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   devise_scope :user do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
@@ -85,4 +90,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Example to match all unknown requests and redirect to root except in development env
+  # match '*path' => redirect('/')   unless Rails.env.development?
 end
