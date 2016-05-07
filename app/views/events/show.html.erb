@@ -1,0 +1,58 @@
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+<p>
+  <strong>Summary:</strong>
+  <%= @event.summary %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @event.status %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @event.type %>
+</p>
+<p>
+  <strong>Target Audiance:</strong>
+  <%= @event.target_audiance %>
+</p>
+<p>
+  <strong>Organizers:</strong>
+  <%= @event.organizers %>
+</p>
+<p>
+  <strong>Guests:</strong>
+  <%= @event.guests %>
+</p>
+<p>
+  <strong>Event Date:</strong>
+  <%= @event.event_date %>
+</p>
+<p>
+  <strong>Event From Time:</strong>
+  <%= @event.event_from_time %>
+</p>
+<p>
+  <strong>Event To Time:</strong>
+  <%= @event.event_to_time %>
+</p>
+<p>
+  <strong>Venue:</strong>
+  <%= @event.venue %>
+</p>
+<p>
+  <strong>Image Path:</strong>
+  <%= @event.image_path %>
+</p>
+<p>
+  <strong>Details:</strong>
+  <%= @event.details %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_event_path(@event) %> |
+  <%= link_to "Destroy", @event, data: {:confirm => 'Are you sure?'}, :method => :delete %> |
+  <%= link_to "View All", events_path %>
+</p>

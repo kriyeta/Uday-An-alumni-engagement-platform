@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :events
   # resources :events
   # Routing all request to website under construction
   # get '/website_under_construction', to: 'website_status#under_construction'

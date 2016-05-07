@@ -1,0 +1,25 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-10">
+          <h3 class="text-warning">
+            Edit event:
+          </h3><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel">
+          <%= render 'form' %>
+
+          <p>
+            <%= link_to "Show", @event %> |
+            <%= link_to "View All", events_path %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

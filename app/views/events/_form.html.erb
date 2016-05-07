@@ -1,0 +1,56 @@
+<%= form_for @event, :html => {:class => "form-horizontal center"} do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :summary %><br />
+    <%= f.text_field :summary %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :target_audiance %><br />
+    <%= f.text_field :target_audiance %>
+  </p>
+  <p>
+    <%= f.label :organizers %><br />
+    <%= f.text_field :organizers %>
+  </p>
+  <p>
+    <%= f.label :guests %><br />
+    <%= f.text_field :guests %>
+  </p>
+  <p>
+    <%= f.label :event_date %><br />
+    <%= f.text_field :event_date %>
+  </p>
+  <p>
+    <%= f.label :event_from_time %><br />
+    <%= f.text_field :event_from_time %>
+  </p>
+  <p>
+    <%= f.label :event_to_time %><br />
+    <%= f.text_field :event_to_time %>
+  </p>
+  <p>
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue %>
+  </p>
+  <p>
+    <%= f.label :image_path %><br />
+    <%= f.text_field :image_path %>
+  </p>
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_field :details %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

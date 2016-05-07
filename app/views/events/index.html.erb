@@ -1,0 +1,43 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-10">
+          <h3 class="text-warning">
+            All Events
+          </h3><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel">
+          <% if !@events.nil? %>
+              <table class="view_table">
+                <tr>
+                  <th>Title</th>
+                  <th>Status</th>
+                  <th>Event Date</th>
+                  <th colspan="3">Actions</th>
+                </tr>
+                <% for event in @events %>
+                    <tr>
+                      <td><%= event.title %></td>
+                      <td><%= event.status %></td>
+                      <td><%= event.event_date %></td>
+                      <td><%= link_to "Show", event %></td>
+                      <td><%= link_to "Edit", edit_event_path(event) %></td>
+                      <td><%= link_to "Destroy", event, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+                    </tr>
+                <% end %>
+              </table>
+              <%= will_paginate @events %>
+          <% else %>
+              There is no events to show!!
+          <% end %>
+          <p><%= link_to "New Event", new_event_path %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
