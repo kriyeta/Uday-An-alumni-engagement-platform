@@ -79,3 +79,6 @@ gem 'rails_12factor'
 gem "nifty-generators", :group => :development
 
 gem 'mocha', group: :test
+
+# Ruby string class extension. It add some methods to set color, background color and text effect on console easier using ANSI escape sequences.
+gem 'colorize'

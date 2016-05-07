@@ -21,6 +21,14 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand list-group-heading" style="color: white;" href="/admin">UDAY Admin</a>
+    <ul class="header-menu-nav lead nav navbar-left navbar-nav header-menu">
+      <li class="">
+        <a href="/events">Events</a>
+      </li>
+      <li class="">
+        <a href="#">Agendas</a>
+      </li>
+    </ul>
   </div>
   <!-- Top Menu Items -->
   <div class="collapse navbar-collapse nav navbar-nav navbar-right" style="margin-right: 20px;" id="navbar-ex-collapse">
@@ -77,52 +85,16 @@
     </table>
   </div>
 </nav>
-<div style="margin-top: 50px; min-height: 100%">
-  <div class="row">
-    <div class="col-md-3">
-      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-      <div id="MainMenu" style=" position: fixed; min-width: 23%;">
-        <div class="list-group panel">
-          <a href="#events" class="list-group-item list-group-heading" data-toggle="collapse" data-parent="#MainMenu">Events</a>
-          <div class="collapse" id="events">
-            <!--<a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">Subitem 1 <i class="fa fa-caret-down"></i></a>-->
-            <!--<div class="collapse list-group-submenu" id="SubMenu1">-->
-            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>-->
-            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>-->
-            <!--<a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>-->
-            <!--<div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">-->
-            <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>-->
-            <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>-->
-            <!--</div>-->
-            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>-->
-            <!--</div>-->
-            <a href="/events" class="list-group-item sublist-group-heading">All Events</a>
-            <a href="#" class="list-group-item sublist-group-heading">Add New Event</a>
-            <a href="#" class="list-group-item sublist-group-heading">Update Event</a>
-          </div>
-          <a href="#agendas" class="list-group-item list-group-heading" data-toggle="collapse" data-parent="#MainMenu">Agendas</a>
-          <div class="collapse in" id="agendas">
-            <a href="#" class="list-group-item sublist-group-heading">Add New Agenda</a>
-            <a href="#" class="list-group-item sublist-group-heading">Update Agenda</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div id="page-wrapper">
-        <div class="row">
-          <div class="col-md-11" style="text-align: center;">
-            <% if !flash.nil? %>
-                <% flash.each do |key, value| %>
-                    <div style="color:green;" class="alert alert-<%= key %>"><%= value %></div>
-                <% end %>
-            <% end %>
-          </div>
-        </div>
-        <%= yield %>
-      </div>
-    </div>
+<div style="margin-top: 50px;">
+  <div style="text-align: center;">
+    <% if !flash.nil? %>
+        <% flash.each do |key, value| %>
+            <div style="color:green;" class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+    <% end %>
   </div>
+  <%= yield %>
 </div>
+
 </body>
 </html>

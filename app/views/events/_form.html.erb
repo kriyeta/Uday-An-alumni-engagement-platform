@@ -1,56 +1,108 @@
 <%= form_for @event, :html => {:class => "form-horizontal center"} do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
-  <p>
-    <%= f.label :target_audiance %><br />
-    <%= f.text_field :target_audiance %>
-  </p>
-  <p>
-    <%= f.label :organizers %><br />
-    <%= f.text_field :organizers %>
-  </p>
-  <p>
-    <%= f.label :guests %><br />
-    <%= f.text_field :guests %>
-  </p>
-  <p>
-    <%= f.label :event_date %><br />
-    <%= f.text_field :event_date %>
-  </p>
-  <p>
-    <%= f.label :event_from_time %><br />
-    <%= f.text_field :event_from_time %>
-  </p>
-  <p>
-    <%= f.label :event_to_time %><br />
-    <%= f.text_field :event_to_time %>
-  </p>
-  <p>
-    <%= f.label :venue %><br />
-    <%= f.text_field :venue %>
-  </p>
-  <p>
-    <%= f.label :image_path %><br />
-    <%= f.text_field :image_path %>
-  </p>
-  <p>
-    <%= f.label :details %><br />
-    <%= f.text_field :details %>
-  </p>
-  <p><%= f.submit %></p>
+    <%= f.error_messages %>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :title, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :title, class: "form-control", placeholder: :title, :required => true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :summary, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :summary, class: "form-control", placeholder: :summary, :required => true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :status, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :status, class: "form-control", placeholder: :status %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :type, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :type, class: "form-control", placeholder: :type %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :target_audiance, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :target_audiance, class: "form-control", placeholder: :target_audiance %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :organizers, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :organizers, class: "form-control", placeholder: :organizers %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :guests, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :guests, class: "form-control", placeholder: :guests %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :event_date, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.date_field :event_date, class: "form-control", placeholder: :event_date, :required => true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :event_from_time, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.time_field :event_from_time, class: "form-control", placeholder: :event_from_time, :required => true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :event_to_time, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.time_field :event_to_time, class: "form-control", placeholder: :event_to_time %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :venue, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :venue, class: "form-control", placeholder: :venue, :required => true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :image_path, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.file_field :image_path, multiple: true, accept: 'image/*', class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :details, class: "control-label" %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_area :details, class: "form-control", placeholder: :details %>
+      </div>
+    </div>
+    <%= f.submit class: "btn btn-block btn-default btn-primary" %></br>
 <% end %>

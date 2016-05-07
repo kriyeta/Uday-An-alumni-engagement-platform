@@ -1,3 +1,24 @@
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", events_path %></p>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left"><h3 class="text-warning">
+              Create New Event
+            </h3></td>
+            <td align="right"><%= link_to "Back to List", events_path %></td>
+          </tr>
+        </table>
+        <br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <%= render 'form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
