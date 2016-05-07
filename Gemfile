@@ -74,3 +74,8 @@ gem 'pg_search'
 gem 'will_paginate', '~> 3.0.7'
 
 gem 'rails_12factor'
+
+#That will successfully create controller and view from your ActiveRecord.
+gem "nifty-generators", :group => :development
+
+gem 'mocha', group: :test

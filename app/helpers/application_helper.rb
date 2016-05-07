@@ -1,4 +1,5 @@
 module ApplicationHelper
+  ActionView::Base.default_form_builder = StandardBuilder
   def devise_mapping
     Devise.mappings[:user]
   end

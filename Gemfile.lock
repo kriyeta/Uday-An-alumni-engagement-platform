@@ -274,14 +274,18 @@ GEM
     memoist (0.14.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    metaclass (0.0.4)
     mime-types (2.99)
     mini_magick (4.3.6)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     naught (1.1.0)
+    nifty-generators (0.4.6)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     oauth (0.4.7)
@@ -446,6 +450,8 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mini_magick
+  mocha
+  nifty-generators
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
