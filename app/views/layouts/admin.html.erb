@@ -109,6 +109,15 @@
     </div>
     <div class="col-md-9">
       <div id="page-wrapper">
+        <div class="row">
+          <div class="col-md-11" style="text-align: center;">
+            <% if !flash.nil? %>
+                <% flash.each do |key, value| %>
+                    <div style="color:green;" class="alert alert-<%= key %>"><%= value %></div>
+                <% end %>
+            <% end %>
+          </div>
+        </div>
         <%= yield %>
       </div>
     </div>

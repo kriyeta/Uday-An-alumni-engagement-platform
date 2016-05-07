@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  summary: MyText
+  status: MyString
+  type: 
+  target_audiance: MyString
+  organizers: MyString
+  guests: MyString
+  event_date: 2016-05-07
+  event_from_time: 2016-05-07 14:48:02
+  event_to_time: 2016-05-07 14:48:02
+  venue: MyText
+  image_path: MyString
+  details: MyText
+
+two:
+  title: MyString
+  summary: MyText
+  status: MyString
+  type: 
+  target_audiance: MyString
+  organizers: MyString
+  guests: MyString
+  event_date: 2016-05-07
+  event_from_time: 2016-05-07 14:48:02
+  event_to_time: 2016-05-07 14:48:02
+  venue: MyText
+  image_path: MyString
+  details: MyText
