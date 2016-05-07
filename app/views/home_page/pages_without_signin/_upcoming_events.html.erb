@@ -1,18 +1,28 @@
 <h4 contenteditable="true" class="upcoming-events-box-header">Upcoming Meets/Events</h4>
+
 <ul class="media-list upcoming-events-box">
-  <li class="media">
-    <a class="pull-left" href="#"><img class="media-object" src="https://unsplash.imgix.net/photo-1414005987108-a6d06de8769f?w=1024&amp;q=50&amp;fm=jpg&amp;s=b37798a9dbd0c8884af2261b518970e3" height="64" width="64"></a>
-    <div class="media-body">
-      <h4 class="media-heading">होली मिलन</h4>
-      <p> 27 मार्च 2016 दिन रविवार को सायं काल 5 बजे से 7 बजे तक संघ कार्यालय केशव भवन करवालो नगर में होली मिलन कार्यक्रम है । </p>
-    </div>
-  </li>
-  <li class="media">
-    <a class="pull-left" href="#"><img class="img-rounded media-object" src="https://unsplash.imgix.net/reserve/MTuhqSiPQbeVnaIYU16X_P1160798_adj.jpg?w=1024&amp;q=50&amp;fm=jpg&amp;s=ede6dca4fff55fa0cc6ec27bcd3480d9" height="64" width="64"></a>
-    <div class="media-body">
-      <h4 class="media-heading">होली पर्व</h4>
-      <p> होली पर्व की शुभकामन सभे सदस्य
-        हम 29 मार्च 2016 को जरुर मिले </p>
-    </div>
-  </li>
+  <% puts @events.size.to_s.red %>
+  <% for event in @events %>
+      <li class="media">
+        <% if event.image_path.blank? %>
+            <a class="pull-left" href="#"><%= image_tag("events/events"+rand(1..2).to_s+".jpg", :alt => "milan-samaroh-1", :class => "img-responsive", :style => "align:center;") %></a>
+        <% else %>
+            <a class="pull-left" href="#"><%= image_tag(event.image_path, :alt => "milan-samaroh-1", :class => "img-responsive", :style => "align:center;") %></a>
+        <% end %>
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= event.title.to(150) %></h4>
+          <p>
+            <%= event.summary.to(150) %>...</p>
+          <strong>
+            Event Date: <%= event.event_date %> From:
+            <% if !event.event_from_time.blank? %>
+                <%= event.event_from_time.strftime("%I:%M%p") %>
+            <% end %> To:
+            <% if !event.event_to_time.blank? %>
+                <%= event.event_to_time.strftime("%I:%M%p") %>
+            <% end %></strong>
+        </div>
+      </li>
+  <% end %>
 </ul>

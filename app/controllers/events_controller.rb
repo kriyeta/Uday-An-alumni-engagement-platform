@@ -5,9 +5,9 @@ class EventsController < ApplicationController
   def index
     search_query = params[:searchinput]
     if search_query.nil?
-      @events = Event.all.order("event_date DESC").page(params[:page]).per_page(10)
+      @events = Event.all.order("event_date DESC").limit(100).page(params[:page]).per_page(10)
     else
-      @events = Event.quick_search(search_query).order("event_date DESC").page(params[:page]).per_page(10)
+      @events = Event.quick_search(search_query).order("event_date DESC").limit(100).page(params[:page]).per_page(10)
     end
   end
 
