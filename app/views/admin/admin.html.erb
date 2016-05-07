@@ -1,0 +1,29 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-10">
+          <h3 class="text-warning">
+            <!--<i class="fa fa-fw fa-check-square-o"></i>Active Agendas-->
+          </h3><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel panel-warning agenda-unit">
+          <center>
+            Hi <a style="text-decoration: none;" href="/my_profile">
+            <% if current_user.name.nil? %>
+                <%= current_user.email %>,<br>
+            <% else %>
+                <%= current_user.name %>,<br>
+            <% end %>
+          </a>
+            You are authorized to update system info. Select task in left side to update.
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

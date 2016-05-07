@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home_page#home'
 
+  # Admin tasks
+  get '/admin', to: 'admin#admin'
+
   # Meets or events
   get '/upcoming_events', to: 'meets_or_events#upcoming_events'
   get '/all_events', to: 'meets_or_events#all_events'

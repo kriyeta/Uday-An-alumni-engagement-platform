@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UdayDummy</title>
+  <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap_and_overrides', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand list-group-heading" style="color: white;" href="/admin">UDAY Admin</a>
+  </div>
+  <!-- Top Menu Items -->
+  <div class="collapse navbar-collapse nav navbar-nav navbar-right" style="margin-right: 20px;" id="navbar-ex-collapse">
+    <% is_not_profile_complete = (current_user.email.nil? or
+        current_user.name.nil? or
+        current_user.passout_class.nil? or
+        current_user.passout_year.nil?) %>
+    <table cellpadding style="margin-top:3px; text-align:right; font-size:13px;">
+      <tr>
+        <td>
+          <% if is_not_profile_complete and !current_page?('/') %>
+
+
+              <div style="float:right; margin-top:7px; margin-right:20px;">
+                <%= update_button_code %></div>
+
+          <% end %>
+        </td>
+        <td style="padding-right:10px;">
+          <a style="text-decoration: none; color: white;" href="/my_profile">
+            <% if current_user.name.nil? %>
+                <%= current_user.email %><br>
+            <% else %>
+                <%= current_user.name %><br>
+            <% end %>
+          </a>
+
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete, :style => "color:white;") %>
+        </td>
+        <td class="dropdown">
+
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+            <% if current_user.identities.first.nil? %>
+                <%= image_tag('avatar_placeholder.png', :alt => "profile image", :width => 44, :height => 44, :style => "border: 1px solid white; border-radius: 15px;") %>
+            <% else %>
+                <%= image_tag(current_user.identities.first.image + "?type=small", :alt => "profile image", :width => 44, :height => 44, :style => "border: 1px solid white; border-radius: 15px;") %>
+            <% end %>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <%= link_to "View Profile", my_profile_path %>
+            </li>
+            <li>
+              <%= link_to "Edit Profile", alumni_personal_info_path %>
+            </li>
+            <li>
+              <%= link_to "Change Password", edit_user_registration_path %>
+            </li>
+          </ul>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</nav>
+<div style="margin-top: 50px; min-height: 100%">
+  <div class="row">
+    <div class="col-md-3">
+      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="#events" class="list-group-item list-group-heading" data-toggle="collapse" data-parent="#MainMenu">Events</a>
+          <div class="collapse" id="events">
+            <!--<a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1">Subitem 1 <i class="fa fa-caret-down"></i></a>-->
+            <!--<div class="collapse list-group-submenu" id="SubMenu1">-->
+            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>-->
+            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>-->
+            <!--<a href="#SubSubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c <i class="fa fa-caret-down"></i></a>-->
+            <!--<div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">-->
+            <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>-->
+            <!--<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>-->
+            <!--</div>-->
+            <!--<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>-->
+            <!--</div>-->
+            <a href="#" class="list-group-item sublist-group-heading">Add New Event</a>
+            <a href="#" class="list-group-item sublist-group-heading">Update Event</a>
+          </div>
+          <a href="#agendas" class="list-group-item list-group-heading" data-toggle="collapse" data-parent="#MainMenu">Agendas</a>
+          <div class="collapse in" id="agendas">
+            <a href="#" class="list-group-item sublist-group-heading">Add New Agenda</a>
+            <a href="#" class="list-group-item sublist-group-heading">Update Agenda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div id="page-wrapper">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

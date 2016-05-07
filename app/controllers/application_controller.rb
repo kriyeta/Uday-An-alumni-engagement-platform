@@ -6,6 +6,13 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def website_status
-    #renders with views/layouts/fullwidth.html.erb
+  end
+
+  def admin
+  end
+
+  protected
+  def authorize_user_as_admin!
+    redirect_to "/", notice: 'You dont have enough permissions to be here' unless current_user.admin
   end
 end

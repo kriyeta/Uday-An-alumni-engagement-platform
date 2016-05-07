@@ -1,0 +1,32 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.list-group.panel > .list-group-item {
+  background-color: black;
+  color: white;
+}
+.list-group-submenu {
+  margin-left:20px;
+}
+
+.list-group-heading{
+  font-family: Gill Sans, Verdana;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.sublist-group-heading{
+  font-family: Gill Sans, Verdana;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.a{
+  color: white;
+}

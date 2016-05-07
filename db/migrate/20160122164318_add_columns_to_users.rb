@@ -13,5 +13,6 @@ class AddColumnsToUsers < ActiveRecord::Migration
     add_column :users, :current_occupation_status, :string
     add_column :users, :current_occupation_status_details, :string
     add_column :users, :preferred_time_of_contact, :string
+    add_column :users, :admin, :boolean, default: false
   end
 end
