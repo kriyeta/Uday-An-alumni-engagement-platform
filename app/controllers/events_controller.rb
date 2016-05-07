@@ -4,13 +4,10 @@ class EventsController < ApplicationController
 
   def index
     search_query = params[:searchinput]
-    puts search_query.to_s.red
-    puts params
-    puts "hello".red
     if search_query.nil?
-      @events = Event.all.page(params[:page]).per_page(10)
+      @events = Event.all.order("event_date DESC").page(params[:page]).per_page(10)
     else
-      @events = Event.quick_search(search_query).page(params[:page]).per_page(10)
+      @events = Event.quick_search(search_query).order("event_date DESC").page(params[:page]).per_page(10)
     end
   end
 
@@ -53,6 +50,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :summary, :status, :type, :target_audiance, :organizers, :guests, :event_date, :event_from_time, :event_to_time, :venue, :image_path, :details)
+    params.require(:event).permit(:title, :summary, :status, :event_type, :target_audiance, :organizers, :guests, :event_date, :event_from_time, :event_to_time, :venue, :image_path, :details)
   end
 end

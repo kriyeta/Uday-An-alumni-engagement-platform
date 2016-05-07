@@ -51,3 +51,28 @@
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
+table#show_details_table {
+  width:100%;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table#show_details_table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table#show_details_table tr:nth-child(even) {
+  background-color: #eee;
+}
+table#show_details_table tr:nth-child(odd) {
+  background-color:#fff;
+}
+table#show_details_table td {
+  min-width: 50%;
+}
+table#show_details_table th	{
+  background-color: black;
+  color: white;
+}

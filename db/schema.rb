@@ -11,13 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327172253) do
+ActiveRecord::Schema.define(version: 20160507091802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
   enable_extension "fuzzystrmatch"
   enable_extension "unaccent"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.string   "status"
+    t.string   "event_type"
+    t.string   "target_audiance"
+    t.string   "organizers"
+    t.string   "guests"
+    t.date     "event_date"
+    t.time     "event_from_time"
+    t.time     "event_to_time"
+    t.text     "venue"
+    t.string   "image_path"
+    t.text     "details"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"

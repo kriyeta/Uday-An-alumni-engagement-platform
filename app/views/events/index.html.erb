@@ -7,7 +7,8 @@
             <td align="left"><h3 class="text-warning">
               All Events
             </h3></td>
-            <td align="right"><%= link_to 'Back', :back %></td>
+            <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
+              <%= link_to "Back to List", events_path %></td>
           </tr>
         </table>
       </div>
@@ -16,7 +17,19 @@
       <div class="col-md-12">
         <table width="100%">
           <tr style="border: none;">
-            <td align="left"><%= will_paginate @events %></td>
+            <td align="left">
+              <% if !will_paginate.blank? %>
+                  <%= will_paginate @events %>
+              <% else %>
+                  <div class='pagination'>
+                    <ul class='pagination'>
+                      <li class='prev previous_page disabled'><a href='#'>← Previous</a></li>
+                      <li class='active'><a rel='start' href='#'>1</a></li>
+                      <li class='next next_page disabled'><a rel='next' href='#'>Next →</a></li>
+                    </ul>
+                  </div>
+              <% end %>
+            </td>
             <td align="left">
               <form role="form">
                 <input id="searchinput" name="searchinput" class="form-control" type="search" placeholder="Search Events" onchange="this.form.submit()"/>
@@ -46,8 +59,7 @@
             </table>
             <br><br>
         <% else %>
-            There is no events to show!!
-            <p><%= link_to "Create New Event", new_event_path %></p>
+            <strong>There is no events to show!!</strong>
         <% end %>
 
       </div>

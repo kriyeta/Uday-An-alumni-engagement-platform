@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :title
       t.text :summary
       t.string :status
-      t.string :type
+      t.string :event_type
       t.string :target_audiance
       t.string :organizers
       t.string :guests

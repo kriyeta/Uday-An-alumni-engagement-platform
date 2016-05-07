@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
                   against: [
                       [:title, 'A'],
                       [:event_date, 'A'],
-                      [:type, 'A'],
+                      [:event_type, 'A'],
                       [:details, 'B'],
                       [:organizers, 'B'],
                       [:summary, 'C'],

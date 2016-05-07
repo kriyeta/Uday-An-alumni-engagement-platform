@@ -1,58 +1,91 @@
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-<p>
-  <strong>Summary:</strong>
-  <%= @event.summary %>
-</p>
-<p>
-  <strong>Status:</strong>
-  <%= @event.status %>
-</p>
-<p>
-  <strong>Type:</strong>
-  <%= @event.type %>
-</p>
-<p>
-  <strong>Target Audiance:</strong>
-  <%= @event.target_audiance %>
-</p>
-<p>
-  <strong>Organizers:</strong>
-  <%= @event.organizers %>
-</p>
-<p>
-  <strong>Guests:</strong>
-  <%= @event.guests %>
-</p>
-<p>
-  <strong>Event Date:</strong>
-  <%= @event.event_date %>
-</p>
-<p>
-  <strong>Event From Time:</strong>
-  <%= @event.event_from_time %>
-</p>
-<p>
-  <strong>Event To Time:</strong>
-  <%= @event.event_to_time %>
-</p>
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue %>
-</p>
-<p>
-  <strong>Image Path:</strong>
-  <%= @event.image_path %>
-</p>
-<p>
-  <strong>Details:</strong>
-  <%= @event.details %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_event_path(@event) %> |
-  <%= link_to "Destroy", @event, data: {:confirm => 'Are you sure?'}, :method => :delete %> |
-  <%= link_to "View All", events_path %>
-</p>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left"><h3 class="text-warning">
+              Event Details
+            </h3></td>
+            <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
+              <%= link_to "Back to List", events_path %></td>
+          </tr>
+        </table>
+        <br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <table id="show_details_table">
+            <tr>
+              <td><strong>Title:</strong></td>
+              <td><%= @event.title %></td>
+            </tr>
+            <tr>
+              <td><strong>Summary:</strong></td>
+              <td><%= @event.summary %></td>
+            </tr>
+            <tr>
+              <td><strong>Status:</strong></td>
+              <td><%= @event.status %></td>
+            </tr>
+            <tr>
+              <td><strong>Type:</strong></td>
+              <td><%= @event.event_type %></td>
+            </tr>
+            <tr>
+              <td><strong>Target Audiance:</strong></td>
+              <td><%= @event.target_audiance %></td>
+            </tr>
+            <tr>
+              <td><strong>Organizers:</strong></td>
+              <td><%= @event.organizers %></td>
+            </tr>
+            <tr>
+              <td><strong>Guests:</strong></td>
+              <td><%= @event.guests %></td>
+            </tr>
+            <tr>
+              <td><strong>Event Date:</strong></td>
+              <td><%= @event.event_date %></td>
+            </tr>
+            <tr>
+              <td><strong>Event Starting Time:</strong></td>
+              <td>
+                <% if !@event.event_from_time.blank? %>
+                    <%= @event.event_from_time.strftime("%I:%M%p") %>
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Event Ending Time:</strong></td>
+              <td>
+                <% if !@event.event_to_time.blank? %>
+                    <%= @event.event_to_time.strftime("%I:%M%p") %>
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Venue:</strong></td>
+              <td><%= @event.venue %></td>
+            </tr>
+            <tr>
+              <td><strong>Image Path:</strong></td>
+              <td><%= @event.image_path %></td>
+            </tr>
+            <tr>
+              <td><strong>Details:</strong></td>
+              <td><%= @event.details %></td>
+            </tr>
+          </table>
+          <p>
+            <%= link_to "Edit", edit_event_path(@event) %> |
+            <%= link_to "Destroy", @event, data: {:confirm => 'Are you sure?'}, :method => :delete %> |
+            <%= link_to "View All", events_path %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
