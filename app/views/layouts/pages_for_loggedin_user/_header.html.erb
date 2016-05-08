@@ -37,7 +37,9 @@
                         <%= current_user.name %><br>
                     <% end %>
                   </a>
-
+                  <% if current_user.admin %>
+                      <%= link_to('Admin', admin_path, :style => "color:white;") %>&nbsp;|&nbsp;
+                  <% end %>
                   <%= link_to('Logout', destroy_user_session_path, :method => :delete, :style => "color:white;") %>
                 </td>
                 <td class="dropdown">

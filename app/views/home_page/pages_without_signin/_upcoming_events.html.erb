@@ -1,28 +1,4 @@
 <h4 contenteditable="true" class="upcoming-events-box-header">Upcoming Meets/Events</h4>
-
 <ul class="media-list upcoming-events-box">
-  <% puts @events.size.to_s.red %>
-  <% for event in @events %>
-      <li class="media">
-        <% if event.image_path.blank? %>
-            <a class="pull-left" href="#"><%= image_tag("events/events"+rand(1..2).to_s+".jpg", :alt => "milan-samaroh-1", :class => "img-responsive", :style => "align:center;") %></a>
-        <% else %>
-            <a class="pull-left" href="#"><%= image_tag(event.image_path, :alt => "milan-samaroh-1", :class => "img-responsive", :style => "align:center;") %></a>
-        <% end %>
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= event.title.to(150) %></h4>
-          <p>
-            <%= event.summary.to(150) %>...</p>
-          <strong>
-            Event Date: <%= event.event_date %> From:
-            <% if !event.event_from_time.blank? %>
-                <%= event.event_from_time.strftime("%I:%M%p") %>
-            <% end %> To:
-            <% if !event.event_to_time.blank? %>
-                <%= event.event_to_time.strftime("%I:%M%p") %>
-            <% end %></strong>
-        </div>
-      </li>
-  <% end %>
+  <%= display_events(@events) %>
 </ul>
