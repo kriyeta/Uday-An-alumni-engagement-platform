@@ -5,17 +5,12 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <form role="form">
+    <form role="form" action="all_events" method="get">
       <div class="form-group has-feedback has-warning">
-        <input id="searchinput" class="form-control input-lg" type="search" placeholder="Search...">
+        <input id="query" name="query" class="form-control input-lg" type="search" placeholder="Search...">
         <span class="fa form-control-feedback fa-search"></span>
         <p class="help-block"><%= search_message %></p>
       </div>
     </form>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <hr>
   </div>
 </div>

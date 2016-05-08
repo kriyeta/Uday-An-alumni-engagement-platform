@@ -16,6 +16,9 @@ module ApplicationHelper
   def display_events(events)
     html_to_render="<hr>"
     puts @events.size.to_s.red
+    if events.blank?
+      html_to_render << "<h4 class='media-heading'> There is no events to show</h4><hr>"
+    end
     for event in events
       html_to_render << "<li class='media'>"
       if event.image_path.blank?
@@ -23,13 +26,21 @@ module ApplicationHelper
       else
         html_to_render << "<a class='pull-left' href='#'>"+image_tag(event.image_path, :alt => 'Event', :class => 'img-responsive', :style => 'align:center;')+"</a>"
       end
-      html_to_render << "<div class='media-body'>"+"<h4 class='media-heading'>"+event.title.truncate_words(20, omission: ' ')
+      if !event.title.blank?
+        html_to_render << "<div class='media-body'>"+"<h4 class='media-heading'>"+event.title.truncate_words(20, omission: ' ')
+      else
+        html_to_render << "<div class='media-body'>"+"<h4 class='media-heading'> Event"
+      end
       if event.created_at >= Date.today-7
         html_to_render << "&nbsp; <span class='label label-warning'>New</span>"
       end
       html_to_render << "</h4>"
-      html_to_render << "<p>" + event.summary.truncate_words(35, omission: "<a style='text-decoration:none' href='#'> &nbsp;&nbsp;Read More>></a>") +"</p>"
-      html_to_render << "<strong> Event Date: </strong>"+event.event_date.strftime('%d-%b-%Y')
+      if !event.summary.blank?
+        html_to_render << "<p>" + event.summary.truncate_words(35, omission: "<a style='text-decoration:none' href='#'> &nbsp;&nbsp;Read More>></a>") +"</p>"
+      end
+      if !event.event_date.blank?
+        html_to_render << "<strong> Event Date: </strong>"+event.event_date.strftime('%d-%b-%Y')
+      end
       if !event.event_from_time.blank?
         html_to_render << "<strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From: </strong>"+event.event_from_time.strftime('%I:%M%p')
       end
