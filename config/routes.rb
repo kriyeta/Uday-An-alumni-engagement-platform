@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :events
   # resources :events
   # Routing all request to website under construction
   # get '/website_under_construction', to: 'website_status#under_construction'
   # match '/' => redirect('/website_under_construction'), via: [:get, :post]
   # match '*path' => redirect('/website_under_construction'), via: [:get, :post]
 
-  devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
+  devise_for :users, class_name: 'FormUser', :controllers => {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   devise_scope :user do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
     get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
@@ -23,12 +22,8 @@ Rails.application.routes.draw do
   root 'home_page#home'
 
   # Admin tasks
-  get '/admin', to: 'admin#admin'
-  get '/admin/all_events', to: 'admin#all_events'
-  get '/admin/new_event', to: 'admin#new'
-  get '/admin/show_event/:id', to: 'admin#show'
-  get '/admin/edit_event/:id', to: 'admin#edit'
-  get '/admin/delete_event/:id', to: 'admin#destroy'
+  resources :events
+  resources :agendas
 
   # Meets or events
   get '/upcoming_events', to: 'meets_or_events#upcoming_events'
