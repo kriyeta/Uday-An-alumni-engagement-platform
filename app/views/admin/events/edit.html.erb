@@ -8,7 +8,7 @@
               Edit Event
             </h3></td>
             <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
-              <%= link_to "Back to List", events_path %></td>
+              <%= link_to "Back to List", admin_events_path %></td>
           </tr>
         </table>
         <br><br>
@@ -20,8 +20,8 @@
           <%= render 'form' %>
 
           <p>
-            <%= link_to "Show", @event %> |
-            <%= link_to "View All", events_path %>
+            <%= link_to "Show", admin_event_path(@event) %> |
+            <%= link_to "View All", admin_events_path %>
           </p>
         </div>
       </div>

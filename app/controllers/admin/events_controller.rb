@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Admin::EventsController < ApplicationController
   before_action :authorize_user_as_admin!
   layout "admin"
 
@@ -20,9 +20,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(event_params)
     if @event.save
-      redirect_to @event, :notice => "Successfully created event."
+      redirect_to [:admin, @event], :notice => "Successfully created event." and return
     else
       render :action => 'new'
     end
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      redirect_to @event, :notice => "Successfully updated event."
+      redirect_to [:admin, @event], :notice => "Successfully updated event." and return
     else
       render :action => 'edit'
     end
@@ -44,7 +44,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_url, :notice => "Successfully destroyed event."
+    redirect_to admin_events_url, :notice => "Successfully destroyed event."
   end
 
   private

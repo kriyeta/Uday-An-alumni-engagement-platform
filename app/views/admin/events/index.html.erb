@@ -8,7 +8,7 @@
               All Events
             </h3></td>
             <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
-              <%= link_to "Back to List", events_path %></td>
+              <%= link_to "Back to List", admin_events_path %></td>
           </tr>
         </table>
       </div>
@@ -35,7 +35,7 @@
                 <input id="query" name="query" class="form-control" type="search" placeholder="Search Events" onchange="this.form.submit()"/>
               </form>
             </td>
-            <td align="right"><%= link_to "Create New Event", new_event_path %></td>
+            <td align="right"><%= link_to "Create New Event", new_admin_event_path %></td>
           </tr>
         </table>
         <% if !@events.blank? %>
@@ -51,9 +51,9 @@
                     <td><%= event.title %></td>
                     <td><%= event.status %></td>
                     <td><%= event.event_date %></td>
-                    <td><%= link_to "Show", event %></td>
-                    <td><%= link_to "Edit", edit_event_path(event) %></td>
-                    <td><%= link_to "Destroy", event, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+                    <td><%= link_to "Show", admin_event_path(event) %></td>
+                    <td><%= link_to "Edit", edit_admin_event_path(event) %></td>
+                    <td><%= link_to "Destroy", admin_event_path(event), data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
                   </tr>
               <% end %>
             </table>

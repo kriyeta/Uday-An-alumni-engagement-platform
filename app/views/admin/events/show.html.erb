@@ -8,7 +8,7 @@
               Event Details
             </h3></td>
             <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
-              <%= link_to "Back to List", events_path %></td>
+              <%= link_to "Back to List", admin_events_path %></td>
           </tr>
         </table>
         <br><br>
@@ -80,9 +80,9 @@
             </tr>
           </table>
           <p>
-            <%= link_to "Edit", edit_event_path(@event) %> |
-            <%= link_to "Destroy", @event, data: {:confirm => 'Are you sure?'}, :method => :delete %> |
-            <%= link_to "View All", events_path %>
+            <%= link_to "Edit", edit_admin_event_path(@event) %> |
+            <%= link_to "Destroy", admin_event_path(@event), data: {:confirm => 'Are you sure?'}, :method => :delete %> |
+            <%= link_to "View All", admin_events_path %>
           </p>
         </div>
       </div>

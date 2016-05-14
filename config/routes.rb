@@ -22,8 +22,10 @@ Rails.application.routes.draw do
   root 'home_page#home'
 
   # Admin tasks
-  resources :events
-  resources :agendas
+  namespace :admin do
+    resources :events
+    resources :agendas
+  end
 
   # Meets or events
   get '/upcoming_events', to: 'meets_or_events#upcoming_events'

@@ -1,4 +1,4 @@
-class AgendasController < ApplicationController
+class Admin::AgendasController < ApplicationController
   before_action :authorize_user_as_admin!
   before_action :set_agenda, only: [:show, :edit, :update, :destroy]
   layout "admin"
