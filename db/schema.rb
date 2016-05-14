@@ -11,13 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507091802) do
+ActiveRecord::Schema.define(version: 20160514084736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "pg_trgm"
   enable_extension "fuzzystrmatch"
   enable_extension "unaccent"
+
+  create_table "agenda_initiators", force: :cascade do |t|
+    t.integer  "agenda_id"
+    t.string   "name"
+    t.integer  "initiator_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "agendas", force: :cascade do |t|
+    t.string   "title"
+    t.string   "status"
+    t.text     "solutions"
+    t.integer  "comments_count"
+    t.integer  "likes_count"
+    t.integer  "dislikes_count"
+    t.integer  "creator_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.datetime "authored_time"
+    t.integer  "agenda_id"
+    t.integer  "author_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -54,6 +83,15 @@ ActiveRecord::Schema.define(version: 20160507091802) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
+  create_table "likes", force: :cascade do |t|
+    t.boolean  "status"
+    t.datetime "status_time"
+    t.integer  "agenda_id"
+    t.integer  "author_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                             default: "",    null: false
@@ -92,5 +130,9 @@ ActiveRecord::Schema.define(version: 20160507091802) do
   add_index "users", ["passout_year"], name: "index_users_on_passout_year", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "agenda_initiators", "agendas", column: "initiator_id"
+  add_foreign_key "agendas", "users", column: "creator_id"
+  add_foreign_key "comments", "users", column: "author_id"
   add_foreign_key "identities", "users"
+  add_foreign_key "likes", "users", column: "author_id"
 end
