@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   root 'home_page#home'
 
   # Admin tasks
+  get '/admin', to: 'admin#admin'
   namespace :admin do
     resources :events
     resources :agendas

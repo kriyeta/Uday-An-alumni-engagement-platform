@@ -1,107 +1,109 @@
 <%= form_for([:admin, @event], :html => {:class => "form-horizontal center"}) do |f| %>
     <%= f.error_messages %>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :title, class: "control-label" %>
+    <div class="form_elems">
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :title, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :title, class: "form-control", placeholder: :title, :required => true %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :title, class: "form-control", placeholder: :title, :required => true %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :summary, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :summary, class: "form-control", placeholder: :summary, :required => true %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :summary, class: "control-label" %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :status, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :status, class: "form-control", placeholder: :status %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :summary, class: "form-control", placeholder: :summary, :required => true %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :event_type, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :event_type, class: "form-control", placeholder: :event_type %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :status, class: "control-label" %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :target_audiance, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :target_audiance, class: "form-control", placeholder: :target_audiance %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :status, class: "form-control", placeholder: :status %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :organizers, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :organizers, class: "form-control", placeholder: :organizers %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :event_type, class: "control-label" %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :guests, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_field :guests, class: "form-control", placeholder: :guests %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :event_type, class: "form-control", placeholder: :event_type %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :event_date, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.date_select :event_date, :default => Date.today, :start_year => Date.today.year-2, :end_year => Date.today.year+20, class: "form-control", placeholder: :event_date, :required => true %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :target_audiance, class: "control-label" %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :event_from_time, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.time_select :event_from_time, :default => Time.now, class: "form-control", placeholder: :event_from_time, :required => true %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :target_audiance, class: "form-control", placeholder: :target_audiance %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :event_to_time, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.time_select :event_to_time, :default => Time.now, class: "form-control", placeholder: :event_to_time %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :organizers, class: "control-label" %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :venue, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_area :venue, rows: 4, class: "form-control", placeholder: :venue, :required => true %>
+        </div>
       </div>
-      <div class="col-md-9">
-        <%= f.text_field :organizers, class: "form-control", placeholder: :organizers %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :image_path, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.file_field :image_path, multiple: true, accept: 'image/*', class: "form-control" %>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :guests, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.text_field :guests, class: "form-control", placeholder: :guests %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :event_date, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.date_select :event_date, :default => Date.today, :start_year => Date.today.year-2, :end_year => Date.today.year+20, class: "form-control", placeholder: :event_date, :required => true %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :event_from_time, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.time_select :event_from_time, :default => Time.now, class: "form-control", placeholder: :event_from_time, :required => true %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :event_to_time, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.time_select :event_to_time, :default => Time.now, class: "form-control", placeholder: :event_to_time %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :venue, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.text_area :venue, rows: 4, class: "form-control", placeholder: :venue, :required => true %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :image_path, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.file_field :image_path, multiple: true, accept: 'image/*', class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-3">
-        <%= f.label :details, class: "control-label" %>
-      </div>
-      <div class="col-md-9">
-        <%= f.text_area :details, rows: 6, class: "form-control", placeholder: :details %>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :details, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_area :details, rows: 6, class: "form-control", placeholder: :details %>
+        </div>
       </div>
     </div>
     <%= f.submit class: "btn btn-block btn-default btn-primary" %></br>

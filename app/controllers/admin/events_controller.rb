@@ -35,7 +35,7 @@ class Admin::EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      redirect_to [:admin, @event], :notice => "Successfully updated event." and return
+      redirect_to [:admin, @event], :notice => "Successfully updated event." and retu
     else
       render :action => 'edit'
     end
