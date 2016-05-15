@@ -8166,6 +8166,7 @@ body {
     margin: 5px;
     padding: 5px;
     border: solid;
+
 }
 
 .students-needs-details {
@@ -8336,4 +8337,39 @@ body {
 .youtube-social-btn:hover{
     color:#FF3333;
     text-decoration: none;
+}
+
+//CSS changes to Bootstrap's Carousel
+
+#carousel-custom {
+  margin: 20px auto;
+  width: 400px;
+}
+#carousel-custom .carousel-indicators {
+  margin: 10px 0 0;
+  overflow: auto;
+  position: static;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+}
+#carousel-custom .carousel-indicators li {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: inline-block;
+  height: auto;
+  margin: 0 !important;
+  width: auto;
+}
+#carousel-custom .carousel-indicators li img {
+  display: block;
+}
+#carousel-custom .carousel-outer {
+  position: relative;
+}
+
+//carousel style
+.carousel-control.left, .carousel-control.right {
+  background-image: none
 }

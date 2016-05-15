@@ -1,0 +1,100 @@
+/* line 5, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.list-group.panel > .list-group-item {
+  background-color: black;
+  color: white;
+}
+
+/* line 9, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.list-group-submenu {
+  margin-left: 20px;
+}
+
+/* line 13, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.list-group-heading {
+  font-family: Gill Sans, Verdana;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* line 22, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.sublist-group-heading {
+  font-family: Gill Sans, Verdana;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* line 30, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.a {
+  color: white;
+}
+
+/* line 34, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.view_table td, th {
+  border: 1px solid black;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+/* line 42, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.view_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 47, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.view_table th {
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+/* line 55, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/* line 61, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* line 66, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/* line 69, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* line 72, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table td {
+  min-width: 50%;
+}
+
+/* line 75, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+table#show_details_table th {
+  background-color: black;
+  color: white;
+}
+
+/* line 80, /Users/kamal/Google Drive/projects/ruby/uday_dummy/app/assets/stylesheets/admin.scss */
+.label_div {
+  background-color: #eee;
+  padding-bottom: 7px;
+  border-radius: 5px;
+}

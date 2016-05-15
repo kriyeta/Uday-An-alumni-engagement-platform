@@ -2,45 +2,75 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="section students-needs">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-5 col-sm-4">
-                <table style="margin-top:20px;">
-                  <tr>
-                    <td>
-                      Website Under construction
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Sign In / Sign up is working
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Search is working
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="col-md-2 col-sm-2 arrow-right"></div>
-              <div class="col-md-5 col-sm-6">
-                <table>
-                  <tr>
-                    <td valign="top">
-                      <h3>Coming soon full working site</h3>
-                      <p>You will be able to see your batch mates,
-                        <br>search batch mates, get batch mates info, send messages,
-                        <br>Upload event photos and many more useful stuffs to do.</p>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+
+        <div id="myCarousel" class="carousel" style="background: transparent;" data-interval="2000" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <h3 class="text-capitalize text-center"><i class="fa fa-fw fa-check-square-o"></i>Active Agenda</h3>
+            <% if !@agendas.blank? %>
+                <% @agendas.each_with_index do |agenda, index| %>
+                    <div class="item
+                          <% if index == 0 %>active
+                          <% end %>" style="height: 400px; align-content: center; margin: auto;">
+                      <div class="panel panel-info agenda-unit" style="height: 340px;">
+                        <div class="panel-heading">
+                          <h3 class="panel-title text-muted">
+                            <i class="fa fa-fw fa-lg fa-star"></i> <%= agenda.title %>
+                            <% if agenda.created_at >= Date.today-7 %>
+                                <span class="label label-primary">New</span>
+                            <% end %>
+                          </h3>
+                        </div>
+                        <div class="panel-body">
+                          <% if agenda.status.include? "Open" %>
+                              <span style="color: blue; font-weight: bold;">Status: Open</span>
+                          <% end %>
+                          <% if agenda.status.include? "Closed" %>
+                              <span style="color: red; font-weight: bold;">Status: Closed</span>
+                          <% end %>
+                          <% if agenda.status.include? "Working" %>
+                              <span style="color: forestgreen; font-weight: bold;">Status: Working</span>
+                          <% end %>
+                          <% if agenda.status.include? "Implemented" %>
+                              <span style="color: forestgreen; font-weight: bold;">Status: Implemented</span>
+                          <% end %>
+                          <h4>Details:</h4>
+                          <p>
+                            <%= agenda.details.truncate_words(35, omission: "...") %>
+                          </p>
+                          <hr>
+                          <h4>Solutions:</h4>
+                          <% if !agenda.solutions.blank? %>
+                              <p> <%= agenda.solutions.truncate_words(35, omission: "...") %></p>
+                          <% else %>
+                              <p><strong>Not finalized yet.</strong></p>
+                          <% end %>
+                          <br>
+                          <a style='text-decoration:none;' href='#'>Read More>></a>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+            <% else %>
+                <center><strong>There is no agenda to show.</strong></center>
+            <% end %>
           </div>
+          <!-- Carousel controls -->
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
         </div>
       </div>
+
     </div>
   </div>
 </div>
