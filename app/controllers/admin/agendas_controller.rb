@@ -77,6 +77,8 @@ class Admin::AgendasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agenda_params
-      params[:agenda]
+      params.require(:agenda).permit!.except(:id)
+      # If you want to permit few columns explicitly
+      # params.require(:agenda).permit(:title, :summary, :status, :event_type, :target_audiance)
     end
 end

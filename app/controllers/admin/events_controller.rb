@@ -35,7 +35,7 @@ class Admin::EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      redirect_to [:admin, @event], :notice => "Successfully updated event." and retu
+      redirect_to [:admin, @event], :notice => "Successfully updated event." and return
     else
       render :action => 'edit'
     end
@@ -50,6 +50,8 @@ class Admin::EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :summary, :status, :event_type, :target_audiance, :organizers, :guests, :event_date, :event_from_time, :event_to_time, :venue, :image_path, :details)
+    params.require(:event).permit!.except(:id)
+    # If you want to permit few columns explicitly
+    # params.require(:event).permit(:title, :summary, :status, :event_type, :target_audiance)
   end
 end
