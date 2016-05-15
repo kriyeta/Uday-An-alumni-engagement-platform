@@ -1,4 +1,96 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_agenda_path(@agenda) %> |
-<%= link_to 'Back', agendas_path %>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left"><h3 class="text-warning">
+              Agenda Details
+            </h3></td>
+            <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
+              <%= link_to "Back to List", admin_agendas_path %></td>
+          </tr>
+        </table>
+        <br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <table id="show_details_table">
+            <tr>
+              <td><strong>Title:</strong></td>
+              <td><%= @agenda.title %></td>
+            </tr>
+            <tr>
+              <td><strong>Status:</strong></td>
+              <td><%= @agenda.status %></td>
+            </tr>
+            <tr>
+              <td><strong>Details:</strong></td>
+              <td><%= @agenda.details %></td>
+            </tr>
+            <tr>
+              <td><strong>Solutions:</strong></td>
+              <td><%= @agenda.solutions %></td>
+            </tr>
+            <tr>
+              <td><strong>Creator:</strong></td>
+              <td>
+                <% if !@agenda.creator_id.blank? %>
+                    <%= User.find(@agenda.creator_id).name %>
+                <% else %>
+                    Admin
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Initiators:</strong></td>
+              <td>
+                <% if !@agenda.agenda_initiators.blank? %>
+                    <% @agenda.agenda_initiators.each do |initiator|%>
+                      <%= initiator.name %>
+                    <% end %>
+                <% else %>
+                    Admin
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>#Comments:</strong></td>
+              <td><%= @agenda.comments_count %></td>
+            </tr>
+            <tr>
+              <td><strong>#Likes:</strong></td>
+              <td><%= @agenda.likes_count %></td>
+            </tr>
+            <tr>
+              <td><strong>#Dislikes:</strong></td>
+              <td><%= @agenda.dislikes_count %></td>
+            </tr>
+            <tr>
+              <td><strong>Agenda Created:</strong></td>
+              <td>
+                <%= @agenda.created_at.strftime("On %d-%b-%Y at %I:%M%p") %>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Agenda Updated:</strong></td>
+              <td>
+                <% if !@agenda.updated_at.blank? %>
+                    <%= @agenda.updated_at.strftime("On %d-%b-%Y at %I:%M%p") %>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+          <p>
+            <%= link_to "Edit", edit_admin_agenda_path(@agenda) %> |
+            <%= link_to "Destroy", admin_agenda_path(@agenda), data: {:confirm => 'Are you sure?'}, :method => :delete %>
+            |
+            <%= link_to "View All", admin_agendas_path %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

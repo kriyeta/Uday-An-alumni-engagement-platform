@@ -13,5 +13,11 @@ class MeetsOrEventsController < ApplicationController
   end
 
   def agendas
+    search_query = params[:query]
+    if search_query.blank?
+      @agendas = Agenda.all.order("updated_at DESC").limit(100).page(params[:page]).per_page(4)
+    else
+      @agendas = Agenda.quick_search(search_query).order("updated_at DESC").limit(100).page(params[:page]).per_page(4)
+    end
   end
 end

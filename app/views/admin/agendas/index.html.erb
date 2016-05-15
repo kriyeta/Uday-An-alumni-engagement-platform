@@ -1,25 +1,68 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left"><h3 class="text-warning">
+              All Agendas
+            </h3></td>
+            <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
+              <%= link_to "Back to List", admin_agendas_path %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left">
+              <% if !will_paginate.blank? %>
+                  <%= will_paginate @agendas %>
+              <% else %>
+                  <div class='pagination'>
+                    <ul class='pagination'>
+                      <li class='prev previous_page disabled'><a href='#'>← Previous</a></li>
+                      <li class='active'><a rel='start' href='#'>1</a></li>
+                      <li class='next next_page disabled'><a rel='next' href='#'>Next →</a></li>
+                    </ul>
+                  </div>
+              <% end %>
+            </td>
+            <td align="left">
+              <form role="form">
+                <input id="query" name="query" class="form-control" type="search" placeholder="Search Agendas" onchange="this.form.submit()"/>
+              </form>
+            </td>
+            <td align="right"><%= link_to "Create New Agenda", new_admin_agenda_path %></td>
+          </tr>
+        </table>
+        <% if !@agendas.blank? %>
+            <table class="view_table">
+              <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Agenda Date</th>
+                <th colspan="3">Actions</th>
+              </tr>
+              <% for agenda in @agendas %>
+                  <tr>
+                    <td><%= agenda.title %></td>
+                    <td><%= agenda.status %></td>
+                    <td><%= agenda.updated_at %></td>
+                    <td><%= link_to "Show", admin_agenda_path(agenda) %></td>
+                    <td><%= link_to "Edit", edit_admin_agenda_path(agenda) %></td>
+                    <td><%= link_to "Destroy", admin_agenda_path(agenda), data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+                  </tr>
+              <% end %>
+            </table>
+            <br><br>
+        <% else %>
+            <strong>There is no agendas to show!!</strong>
+        <% end %>
 
-<h1>Listing Agendas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @agendas.each do |agenda| %>
-      <tr>
-        <td><%= link_to 'Show', agenda %></td>
-        <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
-        <td><%= link_to 'Destroy', agenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Agenda', new_agenda_path %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,9 +9,9 @@ class Agenda < ActiveRecord::Base
                       [:title, 'B'],
                       [:status, 'A'],
                       [:solutions, 'B'],
-                      [:creator, 'B']
+                      [:details, 'B']
                   ],
-                  associated_against: {agenda_initiators: [:initiator, 'C'], comments: [[:comment, 'C'], [:author, 'C']]},
+                  associated_against: {agenda_initiators: [[:name, 'C']], comments: [[:comment, 'C']]},
                   :using => {
                       :tsearch => {:prefix => true, :any_word => true},
                       :trigram => {}

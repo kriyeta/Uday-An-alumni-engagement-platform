@@ -6,7 +6,6 @@ class Admin::AgendasController < ApplicationController
   # GET /agendas
   # GET /agendas.json
   def index
-    @agendas = Agenda.all
     search_query = params[:query]
     if search_query.blank?
       @agendas = Agenda.all.order("updated_at DESC").limit(100).page(params[:page]).per_page(10)
@@ -36,11 +35,11 @@ class Admin::AgendasController < ApplicationController
 
     respond_to do |format|
       if @agenda.save
-        format.html { redirect_to @agenda, notice: 'Agenda was successfully created.' }
+        format.html { redirect_to [:admin, @agenda], notice: 'Agenda was successfully created.' }
         format.json { render :show, status: :created, location: @agenda }
       else
-        format.html { render :new }
-        format.json { render json: @agenda.errors, status: :unprocessable_entity }
+        format.html { render [:admin, :new] }
+        format.json { render json: [:admin, @agenda.errors], status: :unprocessable_entity }
       end
     end
   end
@@ -50,11 +49,11 @@ class Admin::AgendasController < ApplicationController
   def update
     respond_to do |format|
       if @agenda.update(agenda_params)
-        format.html { redirect_to @agenda, notice: 'Agenda was successfully updated.' }
+        format.html { redirect_to [:admin, @agenda], notice: 'Agenda was successfully updated.' }
         format.json { render :show, status: :ok, location: @agenda }
       else
-        format.html { render :edit }
-        format.json { render json: @agenda.errors, status: :unprocessable_entity }
+        format.html { render [:admin, :edit] }
+        format.json { render json: [:admin, @agenda.errors], status: :unprocessable_entity }
       end
     end
   end
@@ -64,7 +63,7 @@ class Admin::AgendasController < ApplicationController
   def destroy
     @agenda.destroy
     respond_to do |format|
-      format.html { redirect_to agendas_url, notice: 'Agenda was successfully destroyed.' }
+      format.html { redirect_to admin_agendas_url, notice: 'Agenda was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

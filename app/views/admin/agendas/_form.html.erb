@@ -1,29 +1,38 @@
-<%= form_for(@agenda) do |f| %>
-    <% if @agenda.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@agenda.errors.count, "error") %> prohibited this agenda from being saved:</h2>
-
-          <ul>
-            <% @agenda.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+<%= form_for([:admin, @agenda], :html => {:class => "form-horizontal center"}) do |f| %>
+    <%= f.error_messages %>
+    <div class="form_elems">
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :title, class: "control-label" %>
         </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
+        <div class="col-md-9">
+          <%= f.text_field :title, class: "form-control", placeholder: :title, :required => true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :status, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.select :status, ['Open', 'Closed', 'Working', 'Implemented'], class: "form-control", placeholder: :status, :required => true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :details, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_area :details, rows: 4, class: "form-control", placeholder: :details, :required => true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 label_div">
+          <%= f.label :solutions, class: "control-label" %>
+        </div>
+        <div class="col-md-9">
+          <%= f.text_area :solutions, rows: 4, class: "form-control", placeholder: :solutions %>
+        </div>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :status %><br>
-      <%= f.text_field :status %>
-    </div>
-    <div class="field">
-      <%= f.label :solutions %><br>
-      <%= f.text_field :solutions %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+    <%= f.submit class: "btn btn-block btn-default btn-primary" %></br>
 <% end %>

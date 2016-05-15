@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160514084736) do
   create_table "agendas", force: :cascade do |t|
     t.string   "title"
     t.string   "status"
+    t.text     "details"
     t.text     "solutions"
     t.integer  "comments_count"
     t.integer  "likes_count"
@@ -41,11 +42,10 @@ ActiveRecord::Schema.define(version: 20160514084736) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
-    t.datetime "authored_time"
     t.integer  "agenda_id"
     t.integer  "author_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -86,11 +86,10 @@ ActiveRecord::Schema.define(version: 20160514084736) do
 
   create_table "likes", force: :cascade do |t|
     t.boolean  "status"
-    t.datetime "status_time"
     t.integer  "agenda_id"
     t.integer  "author_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

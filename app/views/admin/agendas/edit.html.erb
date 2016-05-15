@@ -1,6 +1,30 @@
-<h1>Editing Agenda</h1>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table width="100%">
+          <tr style="border: none;">
+            <td align="left"><h3 class="text-warning">
+              Edit Agenda
+            </h3></td>
+            <td align="right"><%= link_to "Back", :back %>&nbsp;|&nbsp;
+              <%= link_to "Back to List", admin_agendas_path %></td>
+          </tr>
+        </table>
+        <br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @agenda %> |
-<%= link_to 'Back', agendas_path %>
+          <p>
+            <%= link_to "Show", admin_agenda_path(@agenda) %> |
+            <%= link_to "View All", admin_agendas_path %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
