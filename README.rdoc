@@ -1,9 +1,12 @@
-Uday: Alumni Enagagemenet platform
+
+
+Uday: An Alumni Engagement platform
 
 It offers below functionalities:
+
 - Sign in & signup: using email, google, and facebook account.
-- User profile roles: user and admin 
-- Events management: display upcoming events in home page/events page and sparate management page for admin
-- Gallery management: display recent events' photos in home page, specific gallery page and sparate management page for admin
-- Agendas management: Displays agendas and lets the participants vote/comment for agendas. Admin can see summary and manage agendas.
+- User profile roles: user and admin
+- Events management: display upcoming events in home page/events page and separate management page for admin
+- Gallery management: display recent events' photos in the home page, specific gallery page and separate management page for admin
+- Agendas management: Displays agendas and let participants vote/comment for agendas. Admin can see summary and manage agendas.
 - Search: search studends, agendas and events
